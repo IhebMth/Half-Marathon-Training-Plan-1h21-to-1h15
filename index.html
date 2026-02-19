@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Half Marathon — 1:20 → 1:15 | Oct 2026</title>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<title>Training Plan — Phoenix + Half Marathon 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#1c1f26;--bg2:#242830;--bg3:#2c3040;--bg4:#353a4a;
+  --bg:#1c1f26;--bg2:#242830;--bg3:#2c3040;
   --border:#363c4e;--border2:#454d63;
   --text:#f0f2f8;--text2:#b0b8d0;--text3:#6e7a98;
   --accent:#ff4d6a;--accent2:#ff8c4a;--green:#34d98a;
@@ -15,91 +15,83 @@
 }
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
-body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;font-size:15px;line-height:1.65;min-height:100vh;}
-
+body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;font-size:15px;line-height:1.65;}
 .hero{padding:52px 44px 44px;border-bottom:1px solid var(--border);position:relative;overflow:hidden;background:linear-gradient(135deg,#1c1f26 0%,#222636 100%);}
 .hero::before{content:'';position:absolute;top:-100px;right:-80px;width:480px;height:480px;background:radial-gradient(circle,rgba(255,77,106,0.09) 0%,transparent 65%);pointer-events:none;}
 .hero-eyebrow{font-family:'JetBrains Mono',monospace;font-size:0.67rem;color:var(--accent);letter-spacing:4px;text-transform:uppercase;margin-bottom:14px;}
-.hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(3rem,8vw,5.8rem);letter-spacing:3px;line-height:0.93;color:#fff;margin-bottom:18px;}
+.hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.8rem,8vw,5.5rem);letter-spacing:3px;line-height:0.93;color:#fff;margin-bottom:18px;}
 .hero h1 em{color:var(--accent);font-style:normal;}
-.hero-desc{color:var(--text2);font-size:0.95rem;max-width:540px;line-height:1.8;font-weight:300;}
+.hero-desc{color:var(--text2);font-size:0.94rem;max-width:600px;line-height:1.82;font-weight:300;}
 .hero-desc strong{color:var(--text);font-weight:600;}
-.hero-timeline{margin-top:24px;display:flex;gap:28px;flex-wrap:wrap;}
-.tl-item{font-family:'JetBrains Mono',monospace;font-size:0.67rem;color:var(--text3);letter-spacing:1px;text-transform:uppercase;}
-.tl-item strong{color:var(--text2);display:block;margin-top:3px;font-size:0.78rem;letter-spacing:0;}
-
-.stats-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));background:var(--bg2);border-bottom:1px solid var(--border);}
-.stat{padding:20px 16px;text-align:center;border-right:1px solid var(--border);transition:background .2s;}
+.hero-timeline{margin-top:24px;display:flex;gap:26px;flex-wrap:wrap;}
+.tl-item{font-family:'JetBrains Mono',monospace;font-size:0.62rem;color:var(--text3);letter-spacing:1px;text-transform:uppercase;}
+.tl-item strong{color:var(--text2);display:block;margin-top:3px;font-size:0.76rem;letter-spacing:0;font-family:'DM Sans',sans-serif;font-weight:600;}
+.stats-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));background:var(--bg2);border-bottom:1px solid var(--border);}
+.stat{padding:18px 14px;text-align:center;border-right:1px solid var(--border);transition:background .2s;}
 .stat:last-child{border-right:none;}
 .stat:hover{background:var(--bg3);}
-.stat-lbl{font-family:'JetBrains Mono',monospace;font-size:0.58rem;letter-spacing:3px;text-transform:uppercase;color:var(--text3);margin-bottom:7px;}
-.stat-val{font-family:'Bebas Neue',sans-serif;font-size:2rem;letter-spacing:1px;}
-.c-red{color:var(--accent);}.c-green{color:var(--green);}.c-blue{color:var(--blue);}.c-yellow{color:var(--yellow);}.c-purple{color:var(--purple);}
-
-.info-bar{padding:16px 44px;display:flex;align-items:flex-start;gap:16px;border-bottom:1px solid var(--border);}
+.stat-lbl{font-family:'JetBrains Mono',monospace;font-size:0.55rem;letter-spacing:2.5px;text-transform:uppercase;color:var(--text3);margin-bottom:7px;}
+.stat-val{font-family:'Bebas Neue',sans-serif;font-size:1.85rem;letter-spacing:1px;}
+.c-red{color:var(--accent);}.c-green{color:var(--green);}.c-blue{color:var(--blue);}.c-yellow{color:var(--yellow);}.c-purple{color:var(--purple);}.c-orange{color:var(--accent2);}
+.info-bar{padding:15px 44px;display:flex;align-items:flex-start;gap:16px;border-bottom:1px solid var(--border);}
+.info-bar.athlete{background:rgba(52,217,138,0.05);border-left:3px solid rgba(52,217,138,0.4);}
 .info-bar.ramadan{background:rgba(168,136,255,0.06);border-left:3px solid rgba(168,136,255,0.4);}
-.info-bar.mindset{background:rgba(255,77,106,0.05);border-left:3px solid rgba(255,77,106,0.35);}
-.ib-icon{font-size:1.5rem;flex-shrink:0;margin-top:2px;}
-.ib-title{font-family:'DM Sans',sans-serif;font-size:0.82rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:4px;}
+.info-bar.phoenix-bar{background:rgba(255,140,74,0.07);border-left:3px solid rgba(255,140,74,0.5);}
+.ib-icon{font-size:1.45rem;flex-shrink:0;margin-top:3px;}
+.ib-title{font-family:'DM Sans',sans-serif;font-size:0.78rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:5px;}
+.athlete .ib-title{color:var(--green);}
 .ramadan .ib-title{color:var(--purple);}
-.mindset .ib-title{color:var(--accent2);}
-.ib-text{font-size:0.85rem;color:var(--text2);line-height:1.72;max-width:740px;font-weight:300;}
+.phoenix-bar .ib-title{color:var(--accent2);}
+.ib-text{font-size:0.84rem;color:var(--text2);line-height:1.78;max-width:780px;font-weight:300;}
 .ib-text strong{color:var(--text);font-weight:600;}
-
-.controls{display:flex;gap:20px;padding:14px 44px;background:var(--bg2);border-bottom:1px solid var(--border);flex-wrap:wrap;align-items:center;}
+.controls{display:flex;gap:20px;padding:13px 44px;background:var(--bg2);border-bottom:1px solid var(--border);flex-wrap:wrap;align-items:center;}
 .ctrl-grp{display:flex;align-items:center;gap:10px;}
-.ctrl-lbl{font-family:'DM Sans',sans-serif;font-size:0.75rem;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:var(--text3);}
-select{background:var(--bg3);border:1px solid var(--border2);color:var(--text);padding:8px 14px;border-radius:7px;font-family:'DM Sans',sans-serif;font-size:0.85rem;cursor:pointer;outline:none;transition:border-color .2s;}
+.ctrl-lbl{font-family:'DM Sans',sans-serif;font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--text3);}
+select{background:var(--bg3);border:1px solid var(--border2);color:var(--text);padding:8px 14px;border-radius:8px;font-family:'DM Sans',sans-serif;font-size:0.84rem;cursor:pointer;outline:none;transition:border-color .2s;}
 select:focus,select:hover{border-color:var(--accent);}
-
-.phase-banner{padding:18px 44px;background:var(--bg3);border-bottom:1px solid var(--border);border-left:3px solid var(--accent);}
-.phase-title{font-family:'DM Sans',sans-serif;font-size:1rem;font-weight:700;color:#fff;margin-bottom:5px;letter-spacing:0.3px;}
-.phase-meta{font-size:0.82rem;color:var(--text2);line-height:1.6;}
+.phase-banner{padding:17px 44px;background:var(--bg3);border-bottom:1px solid var(--border);border-left:4px solid var(--accent);}
+.phase-title{font-family:'DM Sans',sans-serif;font-size:1rem;font-weight:700;color:#fff;margin-bottom:5px;}
+.phase-meta{font-size:0.81rem;color:var(--text2);line-height:1.65;}
 .phase-meta strong{color:var(--text);font-weight:600;}
-
 .week-wrap{padding:26px 44px;}
-.week-hdr{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;flex-wrap:wrap;gap:10px;}
-.week-title{font-family:'Bebas Neue',sans-serif;font-size:1.55rem;letter-spacing:2px;color:#fff;}
+.week-hdr{display:flex;align-items:center;justify-content:space-between;margin-bottom:13px;flex-wrap:wrap;gap:10px;}
+.week-title{font-family:'Bebas Neue',sans-serif;font-size:1.5rem;letter-spacing:2px;color:#fff;}
 .badges{display:flex;gap:7px;flex-wrap:wrap;}
-.badge{padding:3px 11px;border-radius:20px;font-family:'DM Sans',sans-serif;font-size:0.7rem;font-weight:700;letter-spacing:0.3px;text-transform:uppercase;}
+.badge{padding:3px 11px;border-radius:20px;font-family:'DM Sans',sans-serif;font-size:0.68rem;font-weight:700;letter-spacing:0.3px;text-transform:uppercase;}
 .b-km{background:rgba(90,171,255,0.15);color:var(--blue);border:1px solid rgba(90,171,255,0.25);}
 .b-build{background:rgba(255,77,106,0.12);color:var(--accent);border:1px solid rgba(255,77,106,0.22);}
 .b-recovery{background:rgba(52,217,138,0.12);color:var(--green);border:1px solid rgba(52,217,138,0.22);}
 .b-taper{background:rgba(255,209,102,0.12);color:var(--yellow);border:1px solid rgba(255,209,102,0.22);}
-.b-raceweek{background:rgba(255,140,74,0.14);color:var(--accent2);border:1px solid rgba(255,140,74,0.24);}
-.b-ramadan{background:rgba(168,136,255,0.12);color:var(--purple);border:1px solid rgba(168,136,255,0.22);}
+.b-raceweek{background:rgba(255,77,106,0.2);color:#fff;border:1px solid rgba(255,77,106,0.4);}
+.b-ramadan{background:rgba(168,136,255,0.13);color:var(--purple);border:1px solid rgba(168,136,255,0.25);}
 .b-phoenix{background:rgba(255,140,74,0.18);color:var(--accent2);border:1px solid rgba(255,140,74,0.35);}
-
-.week-tip{margin-bottom:14px;padding:12px 16px;background:var(--bg3);border:1px solid var(--border2);border-radius:8px;font-size:0.85rem;color:var(--text2);line-height:1.7;font-weight:300;}
+.week-tip{margin-bottom:13px;padding:12px 16px;background:var(--bg3);border:1px solid var(--border2);border-radius:8px;font-size:0.84rem;color:var(--text2);line-height:1.74;font-weight:300;}
 .week-tip strong{color:var(--text);font-weight:600;}
-
-.day-card{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:14px 18px;margin-bottom:8px;display:grid;grid-template-columns:110px 90px 1fr;gap:0 16px;align-items:start;transition:border-color .2s,transform .15s,background .2s;}
+.day-card{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:14px 18px;margin-bottom:8px;display:grid;grid-template-columns:130px 95px 1fr;gap:0 14px;align-items:start;transition:border-color .2s,transform .15s,background .2s;}
 .day-card:hover{border-color:var(--border2);transform:translateX(3px);background:var(--bg3);}
-.day-card.today{border-color:rgba(255,77,106,0.45);background:rgba(255,77,106,0.04);}
-.d-name{font-family:'DM Sans',sans-serif;font-size:0.88rem;font-weight:700;color:var(--text);letter-spacing:0.3px;}
-.d-date{display:block;font-family:'JetBrains Mono',monospace;font-size:0.6rem;color:var(--text3);letter-spacing:1px;margin-top:3px;font-weight:400;}
-.pill{display:inline-block;padding:3px 10px;border-radius:20px;font-family:'DM Sans',sans-serif;font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:0.3px;margin-top:2px;white-space:nowrap;}
+.day-card.today{border-color:rgba(255,77,106,0.5);background:rgba(255,77,106,0.05);}
+.d-name{font-family:'DM Sans',sans-serif;font-size:0.87rem;font-weight:700;color:var(--text);}
+.d-date{display:block;font-family:'JetBrains Mono',monospace;font-size:0.58rem;color:var(--text3);letter-spacing:1px;margin-top:3px;}
+.pill{display:inline-block;padding:3px 10px;border-radius:20px;font-family:'DM Sans',sans-serif;font-size:0.67rem;font-weight:700;text-transform:uppercase;letter-spacing:0.3px;margin-top:2px;white-space:nowrap;}
 .p-easy{background:rgba(52,217,138,0.13);color:var(--green);}
 .p-tempo{background:rgba(255,209,102,0.13);color:var(--yellow);}
 .p-intervals{background:rgba(255,77,106,0.12);color:var(--accent);}
 .p-long{background:rgba(90,171,255,0.13);color:var(--blue);}
 .p-recovery{background:rgba(110,122,152,0.18);color:var(--text2);}
-.p-rest{background:rgba(50,58,76,0.6);color:var(--text3);}
+.p-rest{background:rgba(40,46,60,0.8);color:var(--text3);border:1px solid var(--border);}
 .p-strength{background:rgba(168,136,255,0.13);color:var(--purple);}
 .p-hills{background:rgba(255,140,74,0.13);color:var(--accent2);}
 .p-race-pace{background:rgba(255,110,180,0.13);color:var(--pink);}
-.p-race{background:rgba(255,77,106,0.2);color:#fff;border:1px solid rgba(255,77,106,0.4);}
-.d-workout{font-size:0.85rem;color:var(--text2);line-height:1.72;font-weight:300;}
+.p-race{background:rgba(255,77,106,0.22);color:#fff;border:1px solid rgba(255,77,106,0.45);}
+.d-workout{font-size:0.84rem;color:var(--text2);line-height:1.76;font-weight:300;}
 .d-workout strong{color:var(--text);font-weight:600;}
-.d-tip{margin-top:8px;padding:8px 12px;background:rgba(255,140,74,0.07);border-left:2px solid rgba(255,140,74,0.4);border-radius:0 6px 6px 0;font-size:0.78rem;color:var(--accent2);line-height:1.6;}
-
+.d-tip{margin-top:8px;padding:8px 12px;background:rgba(255,140,74,0.06);border-left:2px solid rgba(255,140,74,0.45);border-radius:0 6px 6px 0;font-size:0.77rem;color:var(--accent2);line-height:1.64;}
 .principles{padding:28px 44px;background:var(--bg2);border-top:1px solid var(--border);}
 .principles h2{font-family:'Bebas Neue',sans-serif;font-size:1.5rem;letter-spacing:2px;color:#fff;margin-bottom:16px;}
-.principle-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:10px;}
-.principle{padding:14px 16px;background:var(--bg3);border:1px solid var(--border);border-radius:9px;font-size:0.83rem;color:var(--text2);line-height:1.7;font-weight:300;}
-.principle strong{color:var(--text);font-weight:700;display:block;margin-bottom:4px;font-size:0.87rem;}
-
-.footer{padding:18px 44px;border-top:1px solid var(--border);text-align:center;font-family:'JetBrains Mono',monospace;font-size:0.6rem;color:var(--text3);letter-spacing:2px;}
+.principle-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:9px;}
+.principle{padding:14px 16px;background:var(--bg3);border:1px solid var(--border);border-radius:9px;font-size:0.82rem;color:var(--text2);line-height:1.72;font-weight:300;}
+.principle strong{color:var(--text);font-weight:700;display:block;margin-bottom:4px;font-size:0.86rem;}
+.footer{padding:18px 44px;border-top:1px solid var(--border);text-align:center;font-family:'JetBrains Mono',monospace;font-size:0.58rem;color:var(--text3);letter-spacing:2px;}
 @media(max-width:680px){
   .hero,.info-bar,.controls,.phase-banner,.week-wrap,.principles,.footer{padding-left:18px;padding-right:18px;}
   .day-card{grid-template-columns:1fr;gap:5px;}
@@ -110,44 +102,67 @@ select:focus,select:hover{border-color:var(--accent);}
 <body>
 
 <div class="hero">
-  <div class="hero-eyebrow">// Your Personal Plan · Oct 2026</div>
-  <h1>1:20 <em>→</em> 1:15<br>Half Marathon</h1>
-  <p class="hero-desc">Built around <strong>your life</strong> — shift work, Ramadan, one month off, <strong>two races</strong>: Phoenix ultra (84km, Mar 28) then October half at 1:15. The plan knows you get bored, it knows your legs hurt at km 1. It's all accounted for. <strong>Just show up.</strong></p>
+  <div class="hero-eyebrow">// Personal Plan · Two Races · 2026</div>
+  <h1>Phoenix <em>+</em><br>Half Marathon</h1>
+  <p class="hero-desc">
+    PB <strong>1:20</strong>. Peak: <strong>4:20/km</strong> for 8–10km. Right now: rusty + fasting, 5:00/km is where you start not where you stay.
+    Week starts <strong>Thursday Feb 19</strong>. Eid <strong>Mar 19–20</strong> (rest). Phoenix <strong>Saturday Mar 28</strong>.
+    October: <strong>1:15:00</strong>.
+  </p>
   <div class="hero-timeline">
-    <div class="tl-item">START<strong>Feb 19, 2026</strong></div>
-    <div class="tl-item">RAMADAN<strong>Feb 19 – Mar 20</strong></div>
-    <div class="tl-item">PHOENIX ULTRA<strong>Mar 28 · 84km</strong></div>
+    <div class="tl-item">START (THU)<strong>Feb 19, 2026</strong></div>
+    <div class="tl-item">EID REST<strong>Mar 19–20</strong></div>
+    <div class="tl-item">🏃 PHOENIX (SAT)<strong>Mar 28 · 84km</strong></div>
     <div class="tl-item">🏁 HALF MARATHON<strong>October 2026</strong></div>
-    <div class="tl-item">HM TARGET<strong>3:33 /km</strong></div>
+    <div class="tl-item">GOAL PACE<strong>3:33 /km</strong></div>
   </div>
 </div>
 
 <div class="stats-row">
   <div class="stat"><div class="stat-lbl">Current PB</div><div class="stat-val c-red">1:20</div></div>
-  <div class="stat"><div class="stat-lbl">HM Target</div><div class="stat-val c-green">1:15</div></div>
+  <div class="stat"><div class="stat-lbl">Target</div><div class="stat-val c-green">1:15</div></div>
   <div class="stat"><div class="stat-lbl">Race Pace</div><div class="stat-val c-blue">3:33</div></div>
-  <div class="stat"><div class="stat-lbl">Phoenix Ultra</div><div class="stat-val c-yellow">84km</div></div>
-  <div class="stat"><div class="stat-lbl">Ramadan</div><div class="stat-val c-purple">4 wks</div></div>
-  <div class="stat"><div class="stat-lbl">Improvement</div><div class="stat-val c-red">−5min</div></div>
+  <div class="stat"><div class="stat-lbl">Phoenix</div><div class="stat-val c-orange">84km</div></div>
+  <div class="stat"><div class="stat-lbl">Laps</div><div class="stat-val c-yellow">12×7</div></div>
+  <div class="stat"><div class="stat-lbl">Gain</div><div class="stat-val c-red">−5min</div></div>
 </div>
 
- afternoon runs. 🤲</p>
+<div class="info-bar athlete">
+  <div class="ib-icon">⚡</div>
+  <div>
+    <div class="ib-title">Your Real Profile</div>
+    <p class="ib-text">
+      <strong>1:20 half marathon athlete</strong>, peak 4:20/km for 8–10km. Currently rusty + fasting — 5:00/km is where you start, not your identity.
+      Ramadan weeks build progressively: easy first 2 weeks, real tempo in weeks 3–4.
+      <strong>Weeks start Thursday</strong> (Feb 19). Eid Mar 19–20 = full rest. Light prep Mar 21–27. Phoenix Saturday Mar 28.
+    </p>
   </div>
 </div>
 
-<div class="info-bar mindset">
-  <div class="ib-icon">🔥</div>
+<div class="info-bar ramadan">
+  <div class="ib-icon">🌙</div>
   <div>
-    <div class="ib-title">On Boredom, Hard Starts &amp; The 5:30 Pace</div>
-    <p class="ib-text">Your 5:30 pace after a month off is <strong>completely normal</strong> — aerobic base is still there, legs just need 2–3 weeks to wake up. Km 1–3 always feel bad for everyone, even elites. Rule: <strong>just start. If it still feels awful at km 4, you can stop.</strong> You never will. Also: when you feel like you don't want to run — try the <strong>2km rule</strong>. Lace up, run 2km. If still horrible, come home. You'll never come home. Boredom kills more training plans than injuries. New route, podcast, or just race yourself against yesterday.</p>
+    <div class="ib-title">Ramadan · Feb 19 – Mar 18 · Run 5:00pm → done 5:45pm · Iftar 6:00pm</div>
+    <p class="ib-text">
+      Out at <strong>5:00pm</strong>, done by <strong>5:45pm</strong> — 15 min to settle before breaking fast.
+      <strong>Weeks 1–2:</strong> 4:50–5:00/km easy, remove rust.
+      <strong>Weeks 3–4:</strong> 4:35–4:45/km easy, <strong>4:15–4:25/km tempo</strong>, back-to-back Sat+Sun for Phoenix.
+      Suhoor: oats + 500ml water. After Iftar: 1L water first. 🤲
+    </p>
   </div>
 </div>
 
-<div class="info-bar" style="background:rgba(255,140,74,0.07);border-left:3px solid rgba(255,140,74,0.5);border-bottom:1px solid var(--border);">
+<div class="info-bar phoenix-bar">
   <div class="ib-icon">🔥</div>
   <div>
-    <div class="ib-title" style="font-family:'DM Sans',sans-serif;font-size:0.82rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:4px;color:var(--accent2);">Phoenix Running Challenge · Saturday March 28 · 8 days post-Ramadan</div>
-    <p class="ib-text"><strong>12 laps × 7km = 84km.</strong> Each lap under 1 hour (budget: 8:34/km — walking counts). By Mar 28 you have been eating and drinking normally for 8 days. <strong>Strategy: run 6:00–6:30/km, walk 60–90 sec every km, eat every 2 laps (banana/dates/sandwich), drink at every lap end — non-negotiable.</strong> Weeks 3–4 back-to-back runs teach your legs to keep moving under fatigue — exactly what laps 7–9 demand. After Phoenix: 3 full rest days, then base build. This ultra makes October feel manageable. 💪</p>
+    <div class="ib-title">Phoenix · Saturday Mar 28 · 12 × 7km · Each lap under 1 hour · First to finish wins lap 12</div>
+    <p class="ib-text">
+      At <strong>6:00–6:30/km</strong> you finish each lap in <strong>42–45 min</strong> — leaving 15–18 min buffer per lap. That's your working pace.
+      Walk 60 sec every km to manage fatigue across 12 laps.
+      <strong>Laps 1–9:</strong> 6:00–6:20/km, walk breaks, eat every 2 laps, drink every lap end.
+      <strong>Laps 10–11:</strong> find what's left, tighten to 5:50/km.
+      <strong>Lap 12: race. First to finish wins. Push to 5:00–5:20/km and go.</strong>
+    </p>
   </div>
 </div>
 
@@ -155,11 +170,12 @@ select:focus,select:hover{border-color:var(--accent);}
   <div class="ctrl-grp">
     <span class="ctrl-lbl">Phase</span>
     <select id="phaseSelect" onchange="changePhase()">
-      <option value="1">Phase 1: Ramadan + Phoenix Prep (Wk 1–4)</option>
-      <option value="2">Phase 2: Phoenix Race + Base Build (Wk 5–14)</option>
-      <option value="3">Phase 3: Speed &amp; Strength (Wk 15–26)</option>
-      <option value="4">Phase 4: Race Specific (Wk 27–32)</option>
-      <option value="5">Phase 5: Taper (Wk 33–34)</option>
+      <option value="1">Phase 1 · Ramadan Progressive (Wk 1–4)</option>
+      <option value="2">Phase 2 · Eid Rest + Phoenix Prep (Wk 5)</option>
+      <option value="3">Phase 3 · Phoenix Race + Recovery (Wk 6–7)</option>
+      <option value="4">Phase 4 · Base Rebuild (Wk 8–15)</option>
+      <option value="5">Phase 5 · Speed &amp; Strength (Wk 16–27)</option>
+      <option value="6">Phase 6 · Race Specific + Taper (Wk 28–35)</option>
     </select>
   </div>
   <div class="ctrl-grp">
@@ -174,21 +190,22 @@ select:focus,select:hover{border-color:var(--accent);}
 <div class="principles">
   <h2>// Training Laws</h2>
   <div class="principle-grid">
-    <div class="principle"><strong>🐢 Easy means EASY</strong>Can you hold a full conversation? Good. If you're breathing hard on easy days, slow down. Easy runs build your aerobic engine — they're not warm-ups, they're the foundation.</div>
-    <div class="principle"><strong>📅 Miss a day? Move on</strong>Don't try to "catch up." Skip it, rest, come back. One missed session in 34 weeks changes nothing. Missing 3 weeks because you burned out changes everything.</div>
-    <div class="principle"><strong>💡 The 2km Rule</strong>Don't want to run? Go for just 2km. If still horrible, come back. This works 90%+ of the time. The first 2km are a lie — your body is warming up, not giving out.</div>
-    <div class="principle"><strong>😴 Sleep = training</strong>7–8h minimum. Your legs get stronger while you sleep, not while you run. Bad sleep week = take it easier. Don't push through exhaustion.</div>
-    <div class="principle"><strong>📉 Recovery weeks matter</strong>Every 4th week is lighter on purpose. Do NOT add extra. This is when your body synthesizes all the training. Skip recovery = skip gains.</div>
-    <div class="principle"><strong>🦵 Km 1–3 always feel bad</strong>That stiffness, that heaviness — it's not a sign to stop. Start at 5:45/km. By km 3, your body is properly warm and it clicks. You know this from experience.</div>
-    <div class="principle"><strong>🌙 Ramadan rules</strong>Easy only. No intervals fasted. Hydrate massively at Iftar. Suhoor: carbs + 500ml water. Think of Ramadan runs as maintaining — not building.</div>
-    <div class="principle"><strong>🍖 Fuel right</strong>Hard session: protein within 30 min after. Long run: carbs 2–3h before. Hydrate 2–3L daily. During Ramadan: dates + water at Iftar before eating is perfect pre-run fuel.</div>
+    <div class="principle"><strong>⚡ Your base never left</strong>One month off doesn't erase years of training. 5:00/km fasted and rusty returns to 4:20/km within 2–3 weeks of normal food and training. Trust it.</div>
+    <div class="principle"><strong>🌙 Ramadan ≠ easy all month</strong>Weeks 1–2 are rust removal. Weeks 3–4 are real sessions at real paces. 4:20 fasted = 4:05 fresh physiologically. You're not babying yourself — you're being precise.</div>
+    <div class="principle"><strong>🔥 Phoenix: 6:00–6:30/km = 42–45 min/lap</strong>15–18 min buffer per lap. Use it wisely early on — save it for lap 12. Eat every 2 laps. Drink every single lap end. Lap 12: race to the finish.</div>
+    <div class="principle"><strong>📅 Miss a day? Move on</strong>Never stack sessions to catch up. One missed run changes nothing over 35 weeks. Stacking ruins the next week too.</div>
+    <div class="principle"><strong>😴 Sleep is training</strong>7–8h minimum. Legs strengthen while sleeping. Ramadan short nights = higher quality sleep matters even more. Cut intensity when genuinely exhausted.</div>
+    <div class="principle"><strong>📉 Recovery weeks are sacred</strong>Every 4th week is lighter. This is when fitness is synthesized. The urge to add more on recovery weeks is always wrong. Resist it every time.</div>
+    <div class="principle"><strong>🦵 Km 1–3 always lie</strong>Glycogen depletion + warmup feel like unfitness. They aren't. You proved this: 8km at 5:00 fasted, felt better after km 1. Same thing every run.</div>
+    <div class="principle"><strong>🍖 Fuel right</strong>Hard sessions: protein within 30 min. Long runs: carbs 2–3h before. 3L water daily. Ramadan: dates + water at Iftar before eating. Suhoor carbs = better 5pm runs.</div>
   </div>
 </div>
 
-<div class="footer">PERSONAL PLAN · FEB 19 2026 – OCT 2026 · 34 WEEKS · 1:20:00 → 1:15:00 · 3:33/KM</div>
+<div class="footer">PERSONAL PLAN · THU FEB 19 – OCT 2026 · EID MAR 19–20 · PHOENIX 84KM SAT MAR 28 · HALF MARATHON 1:20 → 1:15 · 3:33/KM</div>
 
 <script>
-const PLAN_START = new Date(2026,1,19); // Feb 19, 2026
+// Week starts THURSDAY Feb 19, 2026
+const PLAN_START = new Date(2026,1,19); // Thu Feb 19
 
 function addDays(d,n){const r=new Date(d);r.setDate(r.getDate()+n);return r;}
 function fmtDate(d){return d.toLocaleDateString('en-GB',{day:'numeric',month:'short'});}
@@ -196,481 +213,485 @@ function getWeekStart(wn){return addDays(PLAN_START,(wn-1)*7);}
 function getDayDate(wn,di){return addDays(getWeekStart(wn),di);}
 function isToday(d){const t=new Date();return d.getFullYear()===t.getFullYear()&&d.getMonth()===t.getMonth()&&d.getDate()===t.getDate();}
 
-const DAY_NAMES=['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'];
-const DAY_KEYS=['monday','tuesday','wednesday','thursday','friday','saturday','sunday'];
+// Days go Thu Fri Sat Sun Mon Tue Wed (week starts Thursday)
+const DAY_NAMES=['Thursday','Friday','Saturday','Sunday','Monday','Tuesday','Wednesday'];
+const DAY_KEYS=['thursday','friday','saturday','sunday','monday','tuesday','wednesday'];
 
 const plan={
-  1:{name:"Ramadan Rebuild",range:"Weeks 1–4",goal:"Survive Ramadan, rebuild the habit. Short easy sessions only.",volume:"20–28 km/week",focus:"Run 5:00pm → done by 5:45pm (15 min before Iftar). Easy only. Wks 3–4: back-to-back sessions for Phoenix prep.",
+  1:{
+    name:"Ramadan — Progressive Return",range:"Weeks 1–4",
+    goal:"Remove rust weeks 1–2, ramp to real paces weeks 3–4. Weeks start Thursday.",
+    volume:"26–40 km/week",
+    focus:"5:00pm start → 5:45pm done. Wks 1–2: 4:50–5:00/km easy. Wks 3–4: 4:35–4:45 easy, 4:15–4:25 tempo, back-to-backs.",
     weeks:{
-      1:{km:22,type:"Ramadan",tip:"🌙 First week back AND first week of Ramadan. Pure survival mode — short, easy, just exist. No expectations on pace.",
+      1:{km:26,type:"Ramadan",tip:"🌙 <strong>Week 1 (Thu Feb 19 – Wed Feb 25)</strong> — First day of Ramadan is today, Thursday. Short week of habit building. Don't expect fast paces — expect to feel better by Sunday than you do today.",
         days:{
-          monday:{t:"rest",w:"REST — Day 1 of Ramadan. Settle in. Light stretching 15 min if you want.",tip:""},
-          tuesday:{t:"easy",w:"Easy Run <strong>4 km</strong> @ 5:30–5:45/km<br>⏰ <strong>5:00–5:45pm before Iftar</strong><br>Warm up with 5 min walk. Go slow. Stop if dizzy.",tip:"🔥 Minimum version: just 2km. Still counts. You showed up."},
-          wednesday:{t:"rest",w:"REST — Mobility 15 min: hip circles, calf stretches, leg swings. You can do this post-Iftar.",tip:""},
-          thursday:{t:"easy",w:"Easy Run <strong>5 km</strong> @ 5:30/km<br>⏰ <strong>5:00–5:45pm</strong><br>Focus on steady breathing. Pace doesn't matter.",tip:"💡 Legs heavy from fasting? Normal. Slow down 15 sec/km — no shame."},
-          friday:{t:"rest",w:"REST — Jumu'ah day. Walk 20 min maximum.",tip:""},
-          saturday:{t:"easy",w:"Easy Run <strong>7 km</strong> @ 5:30–5:45/km<br>⏰ <strong>4:45–5:40pm</strong><br>More time before Iftar on weekends — best day for slightly longer run.",tip:"🌙 Post-Iftar: drink 1L water before sleeping. Sets you up for tomorrow."},
-          sunday:{t:"recovery",w:"Easy Jog/Walk <strong>6 km</strong> @ 5:45–6:00/km or walk+jog mix<br>⏰ <strong>5:00–5:45pm</strong>",tip:""}
+          thursday:{t:"rest",w:"REST — Day 1 of Ramadan. Celebrate, settle in. Stretch post-Iftar if you want.",tip:""},
+          friday:{t:"easy",w:"Easy Run <strong>5 km</strong> @ 4:55–5:05/km<br>⏰ <strong>5:00pm → ~5:30pm</strong><br>Walk 5 min first. Go by feel entirely.",tip:"💡 Heavy km 1 = glycogen depletion + warmup, not unfitness. Lifts by km 3. You know this."},
+          saturday:{t:"easy",w:"Easy Run <strong>7 km</strong> @ 4:55–5:05/km<br>⏰ <strong>5:00pm → ~5:35pm</strong>",tip:"🌙 Suhoor: oats + 500ml water = better afternoon run tomorrow."},
+          sunday:{t:"rest",w:"REST — Mobility 15 min post-Iftar: hips, calves, hamstrings.",tip:""},
+          monday:{t:"easy",w:"Easy Run <strong>7 km</strong> @ 4:50–5:00/km<br>⏰ <strong>5:00pm → ~5:35pm</strong>",tip:"🔥 Feeling slightly better than Friday? That's rust coming off. Your 4:20 is still in there."},
+          tuesday:{t:"rest",w:"REST",tip:""},
+          wednesday:{t:"easy",w:"Easy Run <strong>7 km</strong> @ 4:50–5:00/km<br>⏰ <strong>5:00pm → ~5:35pm</strong>",tip:""}
         }
       },
-      2:{km:24,type:"Ramadan",tip:"🌙 Body adapting to fasting + running. Your 4:50 pace is stored in your muscles — it'll come back within 2–3 weeks of normal training.",
+      2:{km:32,type:"Ramadan",tip:"🌙 <strong>Week 2 (Thu Feb 26 – Wed Mar 4)</strong> — Legs waking up. Push easy runs to 4:45/km when it feels right. Saturday: first real tempo at 4:20–4:30/km fasted. That's a proper workout.",
         days:{
-          monday:{t:"rest",w:"REST — Calf raises 3×15 at home. Easy.",tip:""},
-          tuesday:{t:"easy",w:"Easy Run <strong>5 km</strong> @ 5:20–5:30/km<br>⏰ <strong>5:00–5:45pm</strong>",tip:"🔥 Put on a podcast. Run to the next corner. Don't think, just go."},
-          wednesday:{t:"strength",w:"Home Strength 20 min — post-Iftar when you have energy<br>Squats 3×12, Glute bridge 3×15, Calf raises 3×20, Plank 3×30sec",tip:"💡 Strength prevents injury. 20 min is all it takes."},
-          thursday:{t:"easy",w:"Easy Run <strong>6 km</strong> @ 5:15–5:25/km<br>⏰ <strong>5:00–5:45pm</strong>",tip:""},
+          thursday:{t:"easy",w:"Easy Run <strong>6 km</strong> @ 4:50–4:55/km<br>⏰ <strong>5:00pm → ~5:30pm</strong>",tip:""},
+          friday:{t:"rest",w:"REST — Jumu'ah. Walk 20 min if you want.",tip:""},
+          saturday:{t:"tempo",w:"Controlled Tempo <strong>11 km</strong>:<br>2.5 km easy @ 5:00 → <strong>6 km @ 4:20–4:30/km</strong> → 2.5 km easy<br>⏰ <strong>5:00pm → ~5:45pm</strong>",tip:"🔥 Fasted 4:20–4:30 = fresh 4:05–4:15 physiologically. This is your level returning. If the last 2km slip to 4:30, still a great session."},
+          sunday:{t:"easy",w:"Easy Run <strong>8 km</strong> @ 4:50–4:55/km<br>⏰ <strong>5:00pm → ~5:39pm</strong>",tip:""},
+          monday:{t:"strength",w:"Strength 25 min — post-Iftar<br>Squats 3×12 · Glute bridge 3×15 · Calf raises 3×20 · Plank 3×30sec",tip:""},
+          tuesday:{t:"easy",w:"Easy Run <strong>7 km</strong> @ 4:45–4:55/km + 4×20 sec strides<br>⏰ <strong>5:00pm → ~5:34pm</strong>",tip:"💡 Strides: 20 sec gentle acceleration. Waking the legs up, not racing."},
+          wednesday:{t:"rest",w:"REST",tip:""}
+        }
+      },
+      3:{km:38,type:"Ramadan",tip:"🌙 <strong>Week 3 (Thu Mar 5 – Wed Mar 11)</strong> — Real running. Easy at 4:35–4:45, tempo at 4:15–4:25. Back-to-back Sat+Sun for Phoenix: Sunday on tired legs = laps 7–12 simulation.",
+        days:{
+          thursday:{t:"easy",w:"Easy Run <strong>7 km</strong> @ 4:40–4:50/km + 5×20 sec strides<br>⏰ <strong>5:00pm → ~5:33pm</strong>",tip:""},
           friday:{t:"rest",w:"REST",tip:""},
-          saturday:{t:"easy",w:"Easy Run <strong>8 km</strong> @ 5:20–5:30/km<br>⏰ <strong>4:45–5:40pm</strong>",tip:"🌙 Suhoor tip: oats or bread + 500ml water = better afternoon runs."},
-          sunday:{t:"recovery",w:"Easy Jog <strong>5 km</strong> @ 5:30–5:45/km<br>⏰ <strong>4:30–5:15pm</strong>",tip:""}
+          saturday:{t:"long",w:"<strong>Phoenix Prep — Back-to-back Day 1</strong><br>Steady <strong>10 km</strong> @ 4:45–4:55/km with lap rhythm:<br>Run 2 km → walk 60 sec → repeat × 4<br>⏰ <strong>5:00pm → ~5:50pm</strong>",tip:"💡 This is your Phoenix lap rhythm. Run 2km, walk 1 min, repeat. Note how strong you feel after each walk break — that's your race weapon."},
+          sunday:{t:"long",w:"<strong>Phoenix Prep — Back-to-back Day 2</strong><br>Steady <strong>10 km</strong> @ 4:50–5:00/km on tired legs<br>Same rhythm. Push last 2 km to 4:35–4:40.<br>⏰ <strong>5:00pm → ~5:50pm</strong>",tip:"🔥 Tired at km 7, pushed the last 2. That's exactly laps 11–12 of Phoenix."},
+          monday:{t:"strength",w:"Strength 30 min — post-Iftar<br>Squats 3×12 · Lunges 3×10/leg · RDL 3×10 · Glute bridge 3×15",tip:""},
+          tuesday:{t:"tempo",w:"Fasted Tempo <strong>10 km</strong>:<br>2 km easy → <strong>6 km @ 4:15–4:25/km</strong> → 2 km easy<br>⏰ <strong>5:00pm → ~5:43pm</strong>",tip:"🔥 Real quality session. 4:15 fasted = serious effort. If it slips to 4:25 in the last 2km, that's fine."},
+          wednesday:{t:"rest",w:"REST",tip:""}
         }
       },
-      3:{km:26,type:"Ramadan",tip:"🌙 Halfway through Ramadan. Legs starting to wake up. You might notice your pace feeling more natural.",
+      4:{km:40,type:"Ramadan",tip:"🌙 <strong>Week 4 (Thu Mar 12 – Wed Mar 18)</strong> — Final Ramadan training week. Biggest back-to-back on Saturday + Sunday. Last fasted tempo Tuesday. Wednesday is easy — Eid and Ramadan end coming.",
         days:{
-          monday:{t:"rest",w:"REST",tip:""},
-          tuesday:{t:"easy",w:"Easy Run <strong>6 km</strong> @ 5:10–5:20/km<br>⏰ <strong>5:00–5:45pm</strong><br>Add 4×20 sec light strides at the end if you feel good.",tip:"💡 Strides = gentle acceleration for 20 sec, not sprinting. Just waking the legs."},
-          wednesday:{t:"strength",w:"Home Strength 25 min — post-Iftar<br>Squats 3×12, Lunges 3×10/leg, Glute bridge 3×15, Calf 3×12/leg",tip:""},
-          thursday:{t:"easy",w:"Easy Run <strong>6 km</strong> @ 5:10–5:20/km<br>⏰ <strong>5:00–5:45pm</strong>",tip:"🔥 Notice pace feeling easier? That's your aerobic base waking back up."},
+          thursday:{t:"easy",w:"Easy Run <strong>7 km</strong> @ 4:40–4:50/km<br>⏰ <strong>5:00pm → ~5:33pm</strong>",tip:""},
           friday:{t:"rest",w:"REST",tip:""},
-          saturday:{t:"easy",w:"Easy Run <strong>9 km</strong> @ 5:15–5:25/km<br>⏰ <strong>4:45–5:40pm</strong>",tip:""},
-          sunday:{t:"recovery",w:"Easy Jog <strong>5 km</strong> @ 5:30/km",tip:""}
+          saturday:{t:"long",w:"<strong>Phoenix Prep — Back-to-back Day 1</strong><br>Steady <strong>12 km</strong> @ 4:40–4:50/km with Phoenix rhythm:<br>Run 2 km → walk 60 sec → repeat<br>⏰ <strong>5:00pm → ~5:55pm</strong>",tip:"🔥 Biggest back-to-back Day 1. This distance + rhythm = Phoenix laps 1–6 feeling."},
+          sunday:{t:"long",w:"<strong>Phoenix Prep — Back-to-back Day 2</strong><br>Steady <strong>12 km</strong> @ 4:45–4:55/km on tired legs<br>Same rhythm. Last 3 km: push to 4:25–4:35.<br>⏰ <strong>5:00pm → ~5:57pm</strong>",tip:"💡 Tired legs + pushing the finish = Phoenix laps 10–12. You just proved you can do it."},
+          monday:{t:"rest",w:"REST — Recovery from big weekend.",tip:""},
+          tuesday:{t:"tempo",w:"Last Fasted Tempo <strong>9 km</strong>:<br>2 km easy → <strong>5 km @ 4:15–4:20/km</strong> → 2 km easy<br>⏰ <strong>5:00pm → ~5:42pm</strong>",tip:"🌙 Last fasted quality run of Ramadan. Compare to week 2's first tempo — feel the difference."},
+          wednesday:{t:"rest",w:"REST — Easy day. Ramadan ends Thursday (Eid). Let the legs recover.",tip:""}
         }
-      },
-      4:{km:28,type:"Ramadan",tip:"\U0001F319 Final Ramadan week. Phoenix prep: back-to-back Sat+Sun runs to train for multi-lap fatigue. Eid this week. Phoenix is 8 days away and you'll be back on food. \U0001F525",
-        days:{
-          monday:{t:"rest",w:"REST",tip:""},
-          tuesday:{t:"easy",w:"Easy Run <strong>5 km</strong> @ 5:15/km<br>\u23F0 <strong>5:00\u20135:45pm</strong>",tip:""},
-          wednesday:{t:"rest",w:"REST \u2014 Mobility + stretching post-Iftar",tip:""},
-          thursday:{t:"easy",w:"Easy Run <strong>6 km</strong> @ 5:10/km<br>\u23F0 <strong>5:00\u20135:50pm</strong>",tip:"\U0001F319 Last fasted run. You survived Ramadan \u2014 that's real dedication."},
-          friday:{t:"rest",w:"REST \u2014 Eid! Celebrate, eat, hydrate. Rest legs for the weekend.",tip:""},
-          saturday:{t:"long",w:"Back-to-back Day 1: <strong>8 km</strong> @ 5:20/km<br>Practice Phoenix rhythm: run 1 km \u2192 walk 60 sec \u2192 repeat<br>\u23F0 Morning \u2014 food and water are back!",tip:"\U0001F525 First day eating normally. You'll feel incredible. Practice the lap pacing."},
-          sunday:{t:"long",w:"Back-to-back Day 2: <strong>9 km</strong> @ 5:20\u20135:30/km on tired legs<br>Same rhythm: run 1 km \u2192 walk 90 sec. This IS Phoenix laps 7\u20139.<br>\u23F0 Morning",tip:"\U0001F4A1 Tired legs on Day 2 is the point. Phoenix will feel familiar."}
-        }
-      }
       }
     }
   },
-  2:{name:"Base Building",range:"Weeks 5–14",goal:"Rebuild aerobic base. Get comfortable at 4:50 pace again. Build the engine.",volume:"35–58 km/week",focus:"Easy running 80%, tempo once/week, intervals twice/week by end. Evenings after 6pm shift.",
+  2:{
+    name:"Eid Rest + Phoenix Prep",range:"Week 5",
+    goal:"Eid Thursday–Friday = full rest. Sat–Wed = light prep and carb loading for Phoenix Saturday Mar 28.",
+    volume:"14 km",
+    focus:"Thu Mar 19 Eid = REST. Fri Mar 20 Eid = REST. Sat–Tue: easy runs + carb load. Phoenix is Saturday Mar 28.",
     weeks:{
-      5:{km:17,type:"Phoenix",tip:"\U0001F525 PHOENIX RACE WEEK \u2014 Mar 28 Saturday. Mon\u2013Fri = easy taper + carb loading. Saturday = 84km. Sunday = full rest. Your Ramadan training + back-to-back runs are in your legs.",
+      5:{km:14,type:"Phoenix",tip:"🎉 <strong>Week 5 (Thu Mar 19 – Wed Mar 25)</strong> — EID! Thursday and Friday are complete rest. Ramadan is done. Saturday starts the Phoenix taper. Race is Saturday Mar 28.",
         days:{
-          monday:{t:"easy",w:"Easy Jog <strong>4 km</strong> @ 5:30/km \u2014 just flush the legs",tip:""},
-          tuesday:{t:"rest",w:"REST \u2014 Carb load Day 1: rice, pasta, bread. 3L water.",tip:""},
-          wednesday:{t:"rest",w:"REST \u2014 Carb load Day 2. Big dinner. Sleep 9+ hours.",tip:"\U0001F35D Pasta + protein. Nothing new or heavy."},
-          thursday:{t:"easy",w:"Easy Jog <strong>3 km</strong> @ 5:30/km + 4\xd780m relaxed strides",tip:""},
-          friday:{t:"rest",w:"REST \u2014 Pack race kit: 2 pairs socks, dates/bananas/sandwiches, electrolytes, spare shirt.",tip:"\U0001F4A1 Eat every 2 laps (~50 min). Drink at EVERY lap end. Plan it out."},
-          saturday:{t:"race",w:"\U0001F3C3 <strong>PHOENIX RUNNING CHALLENGE \u2014 12 LAPS \xd7 7KM = 84KM</strong><br><br><strong>Strategy:</strong><br>Laps 1\u20133: 6:30/km \u2014 resist going faster even if easy<br>Laps 4\u20136: 6:15/km + walk 90 sec every km<br>Laps 7\u20139: Walk freely \u2014 stay under 50 min/lap<br>Laps 10\u201312: Whatever it takes. Walking counts. Just finish.<br><br><em>Eat every 2 laps. Drink at every lap end. Non-negotiable.</em>",tip:"\U0001F525 Budget: 8:34/km per lap \u2014 mostly walking pace. Goal: all 12 laps under 1 hour. Your legs know how to keep going tired. You trained this."},
-          sunday:{t:"rest",w:"REST \u2014 Eat everything. Hydrate. Sleep. You just ran 84km. \U0001F3C5",tip:""}
+          thursday:{t:"rest",w:"🎉 REST — EID AL-FITR! Celebrate. Eat. Hydrate. No running today whatsoever.",tip:""},
+          friday:{t:"rest",w:"🎉 REST — Eid Day 2. Still celebrating. Still resting. Food + family + sleep.",tip:""},
+          saturday:{t:"easy",w:"Easy Jog <strong>6 km</strong> @ 5:00/km — first run on real food!<br>Just a flush run. Notice how different your legs feel vs fasted.",tip:"🔥 This is what race morning feels like. Food, water, and running legs. Enjoy it."},
+          sunday:{t:"rest",w:"REST — <strong>Carb load Day 1:</strong> rice, pasta, bread at every meal. 3L water.",tip:"💡 Serious carb loading. You need glycogen stored for 84km on Saturday."},
+          monday:{t:"rest",w:"REST — <strong>Carb load Day 2.</strong> Big dinner. Sleep 9+ hours.",tip:"🍝 Nothing new or heavy. Pasta or rice + protein. Familiar foods only."},
+          tuesday:{t:"easy",w:"Easy Jog <strong>5 km</strong> @ 5:00/km + 5×80m relaxed strides<br>Keep it short. Just waking the legs.",tip:""},
+          wednesday:{t:"rest",w:"REST — Pack race kit: 2 pairs socks, dates/bananas/sandwiches, electrolytes, spare shirt.<br>Sleep early tonight.",tip:"💡 Eat every 2 laps (~42–45 min). Drink every single lap end — even if not thirsty."}
+        }
+      }
+    }
+  },
+  3:{
+    name:"Phoenix Race + Recovery",range:"Weeks 6–7",
+    goal:"Race Phoenix 84km Saturday Mar 28. Lap 12: race to win. Then full recovery week.",
+    volume:"84km race + 20 km recovery",
+    focus:"Wk 6: Phoenix Saturday. Wk 7: respect 84km, gentle return to running.",
+    weeks:{
+      6:{km:0,type:"Phoenix",tip:"🔥 <strong>PHOENIX RACE WEEK (Thu Mar 26 – Sat Mar 28 + recovery)</strong> — Thursday and Friday are final prep. Saturday Mar 28: 84km. Lap 12 is a race. First to finish wins.",
+        days:{
+          thursday:{t:"rest",w:"REST — Final rest day. Eat well, hydrate, sleep early.",tip:""},
+          friday:{t:"rest",w:"REST — Light walk only. Review your lap strategy. Set two alarms.",tip:"💡 Strategy: 6:00–6:20/km laps 1–9 = ~43 min/lap. Laps 10–11 push. Lap 12: race."},
+          saturday:{t:"race",w:"🏃 <strong>PHOENIX RUNNING CHALLENGE — 12 × 7KM = 84KM</strong><br><br><strong>Pace reality check:</strong> 6:00/km × 7km = <strong>42 min/lap</strong>. Budget: 60 min. Buffer: 18 min.<br><br><strong>Lap 1–3:</strong> 6:20/km (44 min) — controlled, deliberate, save energy<br><strong>Lap 4–6:</strong> 6:10/km (43 min) — walk 60 sec every km, eat every 2 laps<br><strong>Lap 7–9:</strong> 6:00/km (42 min) — walk freely, drink every lap end<br><strong>Lap 10–11:</strong> 5:50/km — find what's left, tighten up<br><strong>Lap 12: RACE. 5:00–5:20/km. First to finish wins. Leave nothing.</strong>",tip:"🔥 You're a 1:20 half marathoner. Laps 1–11 are logistics. Lap 12 is your race. Go."},
+          sunday:{t:"rest",w:"REST — Eat everything. Hydrate all day. Sleep. You ran 84km. 🏅",tip:""},
+          monday:{t:"rest",w:"REST — Cold shower or ice bath. Light foam rolling only.",tip:""},
+          tuesday:{t:"rest",w:"REST — Walk 20–30 min max if legs feel okay.",tip:""},
+          wednesday:{t:"recovery",w:"Easy Jog <strong>5 km</strong> @ 5:10–5:20/km — just moving blood through",tip:""}
         }
       },
-      6:{km:20,type:"Recovery",tip:"\u2B07\uFE0F Phoenix recovery week. 84km deserves full respect. Easy movement only.",
+      7:{km:20,type:"Recovery",tip:"⬇️ <strong>Week 7 — Phoenix recovery.</strong> 84km deserves real respect. No rushing. Base rebuild starts week 8.",
         days:{
-          monday:{t:"rest",w:"REST \u2014 Cold shower or ice bath. Light foam rolling.",tip:""},
-          tuesday:{t:"rest",w:"REST \u2014 Walk 20 min if legs allow.",tip:""},
-          wednesday:{t:"recovery",w:"Easy Jog <strong>5 km</strong> @ 5:30\u20135:45/km \xb7 Very slow.",tip:""},
           thursday:{t:"rest",w:"REST",tip:""},
-          friday:{t:"recovery",w:"Easy Jog <strong>5 km</strong> @ 5:30/km",tip:""},
+          friday:{t:"recovery",w:"Easy Jog <strong>5 km</strong> @ 5:10/km",tip:""},
           saturday:{t:"rest",w:"REST",tip:""},
-          sunday:{t:"easy",w:"Easy Run <strong>10 km</strong> @ 5:20\u20135:10/km \u2014 first real post-Phoenix run<br>\u23F0 After 6pm",tip:"\U0001F4A1 You ran 84km 7 days ago. This 10km will feel easy \u2014 that's the point."}
-        }
-      },
-      7:{km:35,type:"Build",tip:"\U0001F3C3 True base building begins. Phoenix gave you endurance and mental toughness most runners never develop. Now we build speed.",
-        days:{
+          sunday:{t:"easy",w:"Easy Run <strong>10 km</strong> @ 4:50–5:00/km — first real post-Phoenix run",tip:"💡 10km after 84km feels easy. Your body remembers everything."},
           monday:{t:"rest",w:"REST",tip:""},
-          tuesday:{t:"easy",w:"Easy Run <strong>8 km</strong> @ 5:05\u20134:55/km + 4\xd720 sec strides<br>\u23F0 After 6pm",tip:"\U0001F525 After Phoenix, 8km feels like nothing. Keep that confidence."},
-          wednesday:{t:"strength",w:"Strength 35 min \u2014 Squats 3\xd712, RDL 3\xd710, Glute bridge 3\xd715, Calf 3\xd720, Core 10 min",tip:""},
-          thursday:{t:"easy",w:"Easy Run <strong>8 km</strong> @ 5:05\u20134:55/km + 4\xd720 sec strides",tip:""},
-          friday:{t:"rest",w:"REST",tip:""},
-          saturday:{t:"tempo",w:"Tempo Run <strong>8 km</strong> total:<br>2 km easy warmup \u2192 <strong>4 km @ 4:20\u20134:10/km</strong> \u2192 2 km cooldown",tip:"\U0001F4A1 Tempo = comfortably hard. Can say 2\u20133 words, not full sentences."},
-          sunday:{t:"long",w:"Long Run <strong>11 km</strong> @ 5:20\u20135:00/km<br>Start slow, finish strong last 2 km.",tip:""}
-        }
-      },
-      8:{km:32,type:"Recovery",tip:"⬇️ Recovery week — mandatory. Don't add extra. This week is when your body actually improves from the work you've done.",
-        days:{
-          monday:{t:"rest",w:"REST",tip:""},
-          tuesday:{t:"easy",w:"Easy Run <strong>6 km</strong> @ 5:10/km + Core 10 min",tip:""},
-          wednesday:{t:"strength",w:"Light Strength 30 min",tip:""},
-          thursday:{t:"easy",w:"Easy Run <strong>8 km</strong> @ 5:10/km",tip:""},
-          friday:{t:"rest",w:"REST",tip:""},
-          saturday:{t:"easy",w:"Easy Run <strong>6 km</strong> @ 5:15/km",tip:""},
-          sunday:{t:"long",w:"Long Run <strong>10 km</strong> @ 5:15–5:00/km",tip:""}
-        }
-      },
-      9:{km:46,type:"Build",tip:"Back fresh after recovery. Your body absorbed the first 4 weeks — now it's ready for more.",
-        days:{
-          monday:{t:"rest",w:"REST",tip:""},
-          tuesday:{t:"easy",w:"Easy <strong>10 km</strong> @ 5:00–4:50/km + 6×20 sec strides + Core",tip:""},
-          wednesday:{t:"intervals",w:"Intervals: <strong>6×800m @ 3:55–3:50/km</strong><br>400m jog recovery · 2 km warmup + 2 km cooldown",tip:""},
-          thursday:{t:"recovery",w:"Recovery <strong>6 km</strong> @ 5:30/km",tip:""},
-          friday:{t:"rest",w:"REST",tip:""},
-          saturday:{t:"tempo",w:"Tempo <strong>10 km</strong>: 2 km easy → <strong>6 km @ 4:05–3:55/km</strong> → 2 km easy",tip:""},
-          sunday:{t:"long",w:"Long Run <strong>16 km</strong> @ 5:10–4:50/km",tip:""}
-        }
-      },
-      10:{km:50,type:"Build",tip:"50km week. You are well and truly back. Half marathon distance on Sunday.",
-        days:{
-          monday:{t:"rest",w:"REST",tip:""},
-          tuesday:{t:"easy",w:"Easy <strong>10 km</strong> @ 5:00–4:50/km + 6×30 sec strides",tip:""},
-          wednesday:{t:"intervals",w:"Intervals: <strong>8×800m @ 3:52–3:48/km</strong><br>90 sec recovery · 2 km warmup + 2 km cooldown",tip:""},
-          thursday:{t:"recovery",w:"Recovery <strong>8 km</strong> @ 5:30/km",tip:""},
-          friday:{t:"rest",w:"REST",tip:""},
-          saturday:{t:"tempo",w:"Tempo <strong>12 km</strong>: 2 km easy → <strong>8 km @ 4:05–3:55/km</strong> → 2 km easy",tip:""},
-          sunday:{t:"long",w:"Long Run <strong>18 km</strong> @ 5:10–4:45/km",tip:"💡 Half marathon distance. You belong here."}
-        }
-      },
-      11:{km:52,type:"Build",tip:"Paces sharpening. You're finding the training rhythm that gets you to 4:50 in training — which gets you 3:33 on race day.",
-        days:{
-          monday:{t:"rest",w:"REST",tip:""},
-          tuesday:{t:"easy",w:"Easy <strong>10 km</strong> @ 4:55–4:45/km + strides + Core",tip:""},
-          wednesday:{t:"intervals",w:"Intervals: <strong>8×800m @ 3:50–3:45/km</strong>, 90 sec recovery",tip:""},
-          thursday:{t:"recovery",w:"Recovery <strong>8 km</strong> @ 5:20/km",tip:""},
-          friday:{t:"rest",w:"REST",tip:""},
-          saturday:{t:"tempo",w:"Tempo <strong>12 km</strong>: 2 km easy → <strong>8 km @ 4:00–3:50/km</strong> → 2 km easy",tip:""},
-          sunday:{t:"long",w:"Long Run <strong>19 km</strong> @ 5:10–4:45/km · Last 3 km @ 4:30",tip:""}
-        }
-      },
-      12:{km:38,type:"Recovery",tip:"⬇️ Second recovery week. Feel the freshness build. Don't add anything — let the fitness absorb.",
-        days:{
-          monday:{t:"rest",w:"REST",tip:""},
-          tuesday:{t:"easy",w:"Easy <strong>8 km</strong> @ 5:00/km",tip:""},
-          wednesday:{t:"strength",w:"Strength 35 min",tip:""},
-          thursday:{t:"easy",w:"Easy <strong>8 km</strong> @ 5:10/km",tip:""},
-          friday:{t:"rest",w:"REST",tip:""},
-          saturday:{t:"easy",w:"Easy <strong>8 km</strong> @ 5:00/km + 4 strides",tip:""},
-          sunday:{t:"long",w:"Long Run <strong>14 km</strong> @ 5:10–4:55/km",tip:""}
-        }
-      },
-      13:{km:56,type:"Build",tip:"Longer intervals. 1200m reps teach your body to sustain quality pace — exactly what HM racing needs.",
-        days:{
-          monday:{t:"rest",w:"REST",tip:""},
-          tuesday:{t:"easy",w:"Easy <strong>10 km</strong> @ 4:50–4:40/km + strides",tip:""},
-          wednesday:{t:"intervals",w:"Intervals: <strong>5×1200m @ 3:52–3:47/km</strong><br>2 min jog recovery · 2 km warmup + 2 km cooldown",tip:""},
-          thursday:{t:"recovery",w:"Recovery <strong>8 km</strong> @ 5:20/km",tip:""},
-          friday:{t:"rest",w:"REST",tip:""},
-          saturday:{t:"tempo",w:"Tempo <strong>14 km</strong>: 2 km easy → <strong>10 km @ 4:00–3:50/km</strong> → 2 km easy",tip:""},
-          sunday:{t:"long",w:"Long Run <strong>20 km</strong> @ 5:10–4:45/km",tip:""}
-        }
-      },
-      14:{km:58,type:"Build",tip:"End of base phase. Foundation is solid. Next phase = getting fast. You're ready.",
-        days:{
-          monday:{t:"rest",w:"REST",tip:""},
-          tuesday:{t:"easy",w:"Easy <strong>12 km</strong> @ 4:50–4:40/km + strides + Core",tip:""},
-          wednesday:{t:"intervals",w:"Intervals: <strong>5×1200m @ 3:50–3:45/km</strong>, 2 min recovery",tip:""},
-          thursday:{t:"recovery",w:"Recovery <strong>8 km</strong> @ 5:20/km",tip:""},
-          friday:{t:"rest",w:"REST",tip:""},
-          saturday:{t:"tempo",w:"Tempo <strong>14 km</strong>: 2 km easy → <strong>10 km @ 3:55–3:48/km</strong> → 2 km easy",tip:""},
-          sunday:{t:"long",w:"Long Run <strong>22 km</strong> @ 5:05–4:40/km",tip:"💪 22km. You are a half marathon runner."}
+          tuesday:{t:"recovery",w:"Easy Jog <strong>5 km</strong> @ 5:10/km",tip:""},
+          wednesday:{t:"rest",w:"REST",tip:""}
         }
       }
     }
   },
-  3:{name:"Speed & Strength",range:"Weeks 15–26",goal:"Get fast. Race pace runs, VO2max, hills. Build the engine that runs 3:33/km.",volume:"55–70 km/week (peak)",focus:"Race pace runs, hill repeats, longer tempos. Sunday long with pace surges.",
+  4:{
+    name:"Base Rebuild",range:"Weeks 8–15",
+    goal:"Back to your real fitness fast. 4:40/km easy, 4:10/km tempo, 20km long runs by week 10.",
+    volume:"40–60 km/week",
+    focus:"Experienced athlete ramp — fast rebuild. Tempo + intervals + long run every week. After 6pm shift.",
     weeks:{
-      15:{km:60,type:"Build",tip:"Welcome to the sharp phase. This is where the 5 minutes come from. Paces approaching race territory.",
+      8:{km:42,type:"Build",tip:"🏃 Base rebuild. You're on full food, Phoenix is done, base never left. Expect to feel close to your real self within 10 days.",
         days:{
-          monday:{t:"rest",w:"REST",tip:""},
-          tuesday:{t:"easy",w:"Easy <strong>12 km</strong> @ 4:45–4:35/km + 6×30 sec strides",tip:""},
-          wednesday:{t:"hills",w:"Hill Repeats: <strong>8×2 min uphill</strong> @ hard effort, jog down recovery<br>2 km warmup + 2 km cooldown · ~12 km total",tip:"💡 Hills = speed + strength with less injury risk. Hard up, easy down. Short hill = 6–8% grade ideally."},
-          thursday:{t:"easy",w:"Easy <strong>10 km</strong> @ 5:00/km",tip:""},
-          friday:{t:"rest",w:"REST",tip:""},
-          saturday:{t:"tempo",w:"Tempo <strong>14 km</strong>: 2 km easy → <strong>10 km @ 3:58–3:48/km</strong> → 2 km easy",tip:""},
-          sunday:{t:"long",w:"Long Run <strong>22 km</strong> @ 5:00–4:35/km (progressive)",tip:""}
+          thursday:{t:"rest",w:"REST",tip:""},
+          friday:{t:"easy",w:"Easy Run <strong>10 km</strong> @ 4:45–4:55/km + 6×20 sec strides",tip:"🔥 The difference between this and week 1's easy runs tells you everything about how much your base is back."},
+          saturday:{t:"strength",w:"Strength 35 min<br>Squats 3×12 · RDL 3×10 · Glute bridge 3×15 · Calf 3×20 · Core 10 min",tip:""},
+          sunday:{t:"tempo",w:"Tempo <strong>12 km</strong>:<br>2 km easy → <strong>8 km @ 4:15–4:05/km</strong> → 2 km easy",tip:"💡 4:15 fresh vs 4:15 fasted. Night and day. This is your real level."},
+          monday:{t:"easy",w:"Easy Run <strong>10 km</strong> @ 4:45–4:50/km",tip:""},
+          tuesday:{t:"rest",w:"REST",tip:""},
+          wednesday:{t:"long",w:"Long Run <strong>15 km</strong> @ 4:50–4:35/km — progressive",tip:""}
         }
       },
-      16:{km:62,type:"Build",tip:"Cruise intervals — longer reps, closer to threshold. The bread and butter of HM training.",
+      9:{km:48,type:"Build",tip:"First intervals back. Paces returning fast. 4:05 tempo territory.",
         days:{
-          monday:{t:"rest",w:"REST",tip:""},
-          tuesday:{t:"easy",w:"Easy <strong>12 km</strong> @ 4:45–4:35/km + strides",tip:""},
-          wednesday:{t:"intervals",w:"Cruise Intervals: <strong>4×2 km @ 3:50–3:45/km</strong><br>90 sec recovery · 2 km warmup + 2 km cooldown",tip:""},
-          thursday:{t:"easy",w:"Easy <strong>10 km</strong> @ 5:00/km",tip:""},
-          friday:{t:"rest",w:"REST",tip:""},
-          saturday:{t:"tempo",w:"Tempo <strong>14 km</strong>: 2 km easy → <strong>10 km @ 3:55–3:45/km</strong> → 2 km easy",tip:""},
-          sunday:{t:"long",w:"Long Run <strong>23 km</strong> @ 5:00–4:35/km",tip:""}
+          thursday:{t:"rest",w:"REST",tip:""},
+          friday:{t:"easy",w:"Easy <strong>10 km</strong> @ 4:45–4:50/km + 6×25 sec strides",tip:""},
+          saturday:{t:"intervals",w:"Intervals: <strong>6×800m @ 3:55–3:50/km</strong><br>400m jog recovery · 2 km warmup + 2 km cooldown",tip:"💡 First interval session. Controlled — every rep the same pace. If you fade on rep 5, you started too fast."},
+          sunday:{t:"recovery",w:"Recovery <strong>6 km</strong> @ 5:05/km",tip:""},
+          monday:{t:"tempo",w:"Tempo <strong>14 km</strong>:<br>2 km easy → <strong>10 km @ 4:10–4:00/km</strong> → 2 km easy",tip:""},
+          tuesday:{t:"rest",w:"REST",tip:""},
+          wednesday:{t:"long",w:"Long Run <strong>16 km</strong> @ 4:45–4:30/km",tip:""}
         }
       },
-      17:{km:64,type:"Build",tip:"VO2max work begins. Shorter, faster intervals. These raise your ceiling.",
+      10:{km:52,type:"Build",tip:"52km week. Back to real volume. Half marathon distance Sunday.",
         days:{
-          monday:{t:"rest",w:"REST",tip:""},
-          tuesday:{t:"easy",w:"Easy <strong>12 km</strong> @ 4:45–4:35/km + strides + Core",tip:""},
-          wednesday:{t:"intervals",w:"VO2max: <strong>8×600m @ 3:32–3:28/km</strong><br>90 sec recovery · 2 km warmup + 2 km cooldown",tip:"💡 These should feel hard — 8/10. Take the full 90 sec between reps."},
-          thursday:{t:"easy",w:"Easy <strong>10 km</strong> @ 5:00/km",tip:""},
-          friday:{t:"rest",w:"REST",tip:""},
-          saturday:{t:"race-pace",w:"Race Pace Run <strong>12 km</strong> total:<br>2 km easy → <strong>8 km @ 3:40–3:35/km</strong> → 2 km easy",tip:"🎯 3:40/km feels hard now. By October, it'll feel like your tempo pace."},
-          sunday:{t:"long",w:"Long Run <strong>23 km</strong> @ 4:55–4:30/km · Last 5 km @ 4:20",tip:""}
+          thursday:{t:"rest",w:"REST",tip:""},
+          friday:{t:"easy",w:"Easy <strong>12 km</strong> @ 4:40–4:50/km + 6×30 sec strides",tip:""},
+          saturday:{t:"intervals",w:"Intervals: <strong>8×800m @ 3:52–3:48/km</strong><br>90 sec recovery · 2 km warmup + 2 km cooldown",tip:""},
+          sunday:{t:"recovery",w:"Recovery <strong>8 km</strong> @ 5:05/km",tip:""},
+          monday:{t:"tempo",w:"Tempo <strong>14 km</strong>:<br>2 km easy → <strong>10 km @ 4:05–3:55/km</strong> → 2 km easy",tip:""},
+          tuesday:{t:"rest",w:"REST",tip:""},
+          wednesday:{t:"long",w:"Long Run <strong>18 km</strong> @ 4:45–4:30/km",tip:"💡 Half marathon distance. Your legs are home."}
         }
       },
-      18:{km:46,type:"Recovery",tip:"⬇️ Recovery week. Mandatory. Sleep more, stretch more, trust the process completely.",
+      11:{km:38,type:"Recovery",tip:"⬇️ Recovery week. Mandatory. 3 hard rebuild weeks synthesized here.",
         days:{
+          thursday:{t:"rest",w:"REST",tip:""},
+          friday:{t:"easy",w:"Easy <strong>8 km</strong> @ 4:50/km",tip:""},
+          saturday:{t:"strength",w:"Strength 35 min",tip:""},
+          sunday:{t:"easy",w:"Easy <strong>8 km</strong> @ 4:50/km",tip:""},
           monday:{t:"rest",w:"REST",tip:""},
+          tuesday:{t:"easy",w:"Easy <strong>8 km</strong> @ 4:48/km + 4 strides",tip:""},
+          wednesday:{t:"long",w:"Long Run <strong>14 km</strong> @ 4:50–4:40/km",tip:""}
+        }
+      },
+      12:{km:56,type:"Build",tip:"1200m intervals. Longer reps building race-pace sustainability.",
+        days:{
+          thursday:{t:"rest",w:"REST",tip:""},
+          friday:{t:"easy",w:"Easy <strong>12 km</strong> @ 4:40/km + strides",tip:""},
+          saturday:{t:"intervals",w:"Intervals: <strong>5×1200m @ 3:52–3:47/km</strong><br>2 min recovery · 2 km warmup + 2 km cooldown",tip:""},
+          sunday:{t:"recovery",w:"Recovery <strong>8 km</strong> @ 5:05/km",tip:""},
+          monday:{t:"tempo",w:"Tempo <strong>16 km</strong>:<br>2 km easy → <strong>12 km @ 4:00–3:52/km</strong> → 2 km easy",tip:""},
+          tuesday:{t:"rest",w:"REST",tip:""},
+          wednesday:{t:"long",w:"Long Run <strong>20 km</strong> @ 4:45–4:25/km",tip:""}
+        }
+      },
+      13:{km:60,type:"Build",tip:"End of rebuild. 60km week, tempo touching 3:48. You are fully back.",
+        days:{
+          thursday:{t:"rest",w:"REST",tip:""},
+          friday:{t:"easy",w:"Easy <strong>12 km</strong> @ 4:40/km + strides + Core",tip:""},
+          saturday:{t:"intervals",w:"Intervals: <strong>5×1200m @ 3:50–3:45/km</strong>, 2 min recovery",tip:""},
+          sunday:{t:"recovery",w:"Recovery <strong>8 km</strong> @ 5:05/km",tip:""},
+          monday:{t:"tempo",w:"Tempo <strong>16 km</strong>:<br>2 km easy → <strong>12 km @ 3:55–3:48/km</strong> → 2 km easy",tip:""},
+          tuesday:{t:"rest",w:"REST",tip:""},
+          wednesday:{t:"long",w:"Long Run <strong>22 km</strong> @ 4:45–4:20/km",tip:"💪 22km. October is in sight."}
+        }
+      },
+      14:{km:44,type:"Recovery",tip:"⬇️ Recovery week 2. Rebuild complete. Speed phase starts next week.",
+        days:{
+          thursday:{t:"rest",w:"REST",tip:""},
+          friday:{t:"easy",w:"Easy <strong>10 km</strong> @ 4:50/km",tip:""},
+          saturday:{t:"strength",w:"Strength 35 min",tip:""},
+          sunday:{t:"easy",w:"Easy <strong>10 km</strong> @ 4:50/km",tip:""},
+          monday:{t:"rest",w:"REST",tip:""},
+          tuesday:{t:"easy",w:"Easy <strong>8 km</strong> @ 4:48/km + strides",tip:""},
+          wednesday:{t:"long",w:"Long Run <strong>16 km</strong> @ 4:50–4:40/km",tip:""}
+        }
+      },
+      15:{km:62,type:"Build",tip:"Transition to speed phase. First cruise intervals + race pace run. Bridge to 3:33/km.",
+        days:{
+          thursday:{t:"rest",w:"REST",tip:""},
+          friday:{t:"easy",w:"Easy <strong>12 km</strong> @ 4:40/km + strides",tip:""},
+          saturday:{t:"intervals",w:"Cruise Intervals: <strong>4×2 km @ 3:50–3:45/km</strong><br>90 sec recovery · 2 km warmup + 2 km cooldown",tip:"💡 Threshold pace. Uncomfortable but sustainable. This is where 3:33 race pace starts feeling normal."},
+          sunday:{t:"easy",w:"Easy <strong>10 km</strong> @ 4:50/km",tip:""},
+          monday:{t:"race-pace",w:"Race Pace Run <strong>14 km</strong>:<br>2 km easy → <strong>10 km @ 3:40–3:35/km</strong> → 2 km easy",tip:"🎯 First proper race pace run. Hard now — feels easier every week."},
+          tuesday:{t:"rest",w:"REST",tip:""},
+          wednesday:{t:"long",w:"Long Run <strong>24 km</strong> @ 4:45–4:20/km",tip:""}
+        }
+      }
+    }
+  },
+  5:{
+    name:"Speed & Strength",range:"Weeks 16–27",
+    goal:"Build the engine that holds 3:33/km for 21km. VO2max, hills, sustained race pace.",
+    volume:"62–72 km/week (peak)",
+    focus:"VO2max intervals, hill repeats, long tempos, race pace runs. Long runs with pace finishes.",
+    weeks:{
+      16:{km:64,type:"Build",tip:"Sharp phase. VO2max + hills. These sessions are where the 5 minutes come from.",
+        days:{
+          thursday:{t:"rest",w:"REST",tip:""},
+          friday:{t:"easy",w:"Easy <strong>13 km</strong> @ 4:40–4:35/km + 6×30 sec strides",tip:""},
+          saturday:{t:"hills",w:"Hill Repeats: <strong>8×2 min uphill</strong> @ hard effort, jog down<br>2 km warmup + 2 km cooldown",tip:"💡 Hills = speed + leg strength with low injury risk. Hard up, easy jog down. 6–8% grade."},
+          sunday:{t:"easy",w:"Easy <strong>10 km</strong> @ 4:50/km",tip:""},
+          monday:{t:"tempo",w:"Tempo <strong>16 km</strong>:<br>2 km easy → <strong>12 km @ 3:50–3:42/km</strong> → 2 km easy",tip:""},
+          tuesday:{t:"rest",w:"REST",tip:""},
+          wednesday:{t:"long",w:"Long Run <strong>23 km</strong> @ 4:45–4:25/km (progressive)",tip:""}
+        }
+      },
+      17:{km:66,type:"Build",tip:"VO2max intervals. Raise your ceiling. The impossible pace today = race pace in October.",
+        days:{
+          thursday:{t:"rest",w:"REST",tip:""},
+          friday:{t:"easy",w:"Easy <strong>13 km</strong> @ 4:40–4:35/km + strides + Core",tip:""},
+          saturday:{t:"intervals",w:"VO2max: <strong>8×600m @ 3:32–3:28/km</strong><br>90 sec recovery · 2 km warmup + 2 km cooldown",tip:"💡 8/10 effort. Hard but controlled. Every rep consistent. Full 90 sec rest."},
+          sunday:{t:"easy",w:"Easy <strong>10 km</strong> @ 4:50/km",tip:""},
+          monday:{t:"race-pace",w:"Race Pace Run <strong>16 km</strong>:<br>2 km easy → <strong>12 km @ 3:38–3:33/km</strong> → 2 km easy",tip:"🎯 3:38 = race pace. 12km at this effort. October is being built right now."},
+          tuesday:{t:"rest",w:"REST",tip:""},
+          wednesday:{t:"long",w:"Long Run <strong>25 km</strong> @ 4:45–4:20/km · Last 5 km @ 4:10",tip:""}
+        }
+      },
+      18:{km:64,type:"Build",tip:"Hills again + race pace long run. Quad strength for October's hard km 15–18.",
+        days:{
+          thursday:{t:"rest",w:"REST",tip:""},
+          friday:{t:"easy",w:"Easy <strong>13 km</strong> @ 4:40/km + strides",tip:""},
+          saturday:{t:"hills",w:"Hill Repeats: <strong>10×2 min uphill</strong>, jog down recovery",tip:""},
+          sunday:{t:"easy",w:"Easy <strong>10 km</strong> @ 4:50/km",tip:""},
+          monday:{t:"tempo",w:"Tempo <strong>16 km</strong>:<br>2 km easy → <strong>12 km @ 3:48–3:40/km</strong> → 2 km easy",tip:""},
+          tuesday:{t:"rest",w:"REST",tip:""},
+          wednesday:{t:"long",w:"Long Run <strong>25 km</strong> @ 4:45–4:15/km",tip:""}
+        }
+      },
+      19:{km:48,type:"Recovery",tip:"⬇️ Recovery week. Speed block 1 absorbed. Sleep more. Fitness is being synthesized.",
+        days:{
+          thursday:{t:"rest",w:"REST",tip:""},
+          friday:{t:"easy",w:"Easy <strong>10 km</strong> @ 4:50/km",tip:""},
+          saturday:{t:"strength",w:"Strength 35 min — Squats · RDL · Glute bridge · Calf · Core",tip:""},
+          sunday:{t:"easy",w:"Easy <strong>10 km</strong> @ 4:50/km",tip:""},
+          monday:{t:"rest",w:"REST",tip:""},
+          tuesday:{t:"easy",w:"Easy <strong>10 km</strong> @ 4:48/km + 4 strides",tip:""},
+          wednesday:{t:"long",w:"Long Run <strong>16 km</strong> @ 4:50–4:42/km",tip:""}
+        }
+      },
+      20:{km:68,type:"Build",tip:"Back strong. Cruise intervals + first 14km at race pace. 3:33 is becoming real.",
+        days:{
+          thursday:{t:"rest",w:"REST",tip:""},
+          friday:{t:"easy",w:"Easy <strong>13 km</strong> @ 4:40/km + strides",tip:""},
+          saturday:{t:"intervals",w:"Cruise Intervals: <strong>3×3 km @ 3:48–3:43/km</strong><br>2 min recovery · 2 km warmup + 2 km cooldown",tip:""},
+          sunday:{t:"easy",w:"Easy <strong>10 km</strong> @ 4:50/km",tip:""},
+          monday:{t:"race-pace",w:"Race Pace Run <strong>18 km</strong>:<br>2 km easy → <strong>14 km @ 3:37–3:33/km</strong> → 2 km easy",tip:"🎯 14km at exact race pace. Note vs week 15 — see the progression?"},
+          tuesday:{t:"rest",w:"REST",tip:""},
+          wednesday:{t:"long",w:"Long Run <strong>26 km</strong> @ 4:45–4:15/km · Last 8 km @ 4:10",tip:""}
+        }
+      },
+      21:{km:70,type:"Build",tip:"Peak volume week. Hardest week of the plan. Everything from here is easier.",
+        days:{
+          thursday:{t:"rest",w:"REST",tip:""},
+          friday:{t:"easy",w:"Easy <strong>14 km</strong> @ 4:40–4:35/km + strides + Core",tip:""},
+          saturday:{t:"intervals",w:"VO2max: <strong>10×600m @ 3:30–3:26/km</strong>, 90 sec recovery",tip:""},
+          sunday:{t:"easy",w:"Easy <strong>10 km</strong> @ 4:50/km",tip:""},
+          monday:{t:"tempo",w:"Tempo <strong>16 km</strong>:<br>2 km easy → <strong>12 km @ 3:45–3:38/km</strong> → 2 km easy",tip:""},
+          tuesday:{t:"rest",w:"REST",tip:""},
+          wednesday:{t:"long",w:"Long Run <strong>28 km</strong> @ 4:45–4:15/km · Last 10 km @ 4:10–4:00",tip:""}
+        }
+      },
+      22:{km:50,type:"Recovery",tip:"⬇️ Recovery after peak week. Major fitness being synthesized right now.",
+        days:{
+          thursday:{t:"rest",w:"REST",tip:""},
+          friday:{t:"easy",w:"Easy <strong>10 km</strong> @ 4:50/km",tip:""},
+          saturday:{t:"strength",w:"Strength 35 min",tip:""},
+          sunday:{t:"easy",w:"Easy <strong>10 km</strong> @ 4:50/km",tip:""},
+          monday:{t:"rest",w:"REST",tip:""},
+          tuesday:{t:"easy",w:"Easy <strong>10 km</strong> @ 4:48/km + strides",tip:""},
+          wednesday:{t:"long",w:"Long Run <strong>18 km</strong> @ 4:50–4:42/km",tip:""}
+        }
+      },
+      23:{km:70,type:"Build",tip:"Mixed intervals — hardest session of the plan. Builds pace change and top-end speed.",
+        days:{
+          thursday:{t:"rest",w:"REST",tip:""},
+          friday:{t:"easy",w:"Easy <strong>14 km</strong> @ 4:40–4:35/km + 6×150m strides",tip:""},
+          saturday:{t:"intervals",w:"Mixed: <strong>3 sets of (1200m @ 3:37 + 800m @ 3:32 + 400m @ 3:22)</strong><br>3 min rest between sets · 2 km warmup + 2 km cooldown",tip:"💡 Hardest session in the plan. Full 3 min between sets. Consistency > going hard on set 1."},
+          sunday:{t:"easy",w:"Easy <strong>10 km</strong> @ 4:50/km",tip:""},
+          monday:{t:"race-pace",w:"Race Pace <strong>18 km</strong>:<br>2 km easy → <strong>14 km @ 3:35–3:33/km</strong> → 2 km easy",tip:"🎯 Exact race pace. 14km. October is this."},
+          tuesday:{t:"rest",w:"REST",tip:""},
+          wednesday:{t:"long",w:"Long Run <strong>28 km</strong> @ 4:45–4:10/km · Last 10 km @ 4:05–3:58",tip:""}
+        }
+      },
+      24:{km:70,type:"Build",tip:"Near-peak. This week cements everything built since March.",
+        days:{
+          thursday:{t:"rest",w:"REST",tip:""},
+          friday:{t:"easy",w:"Easy <strong>14 km</strong> @ 4:40/km + strides",tip:""},
+          saturday:{t:"intervals",w:"Mixed: <strong>3 sets of (1200m @ 3:35 + 800m @ 3:30 + 400m @ 3:20)</strong><br>3 min rest between sets",tip:""},
+          sunday:{t:"easy",w:"Easy <strong>10 km</strong> @ 4:50/km",tip:""},
+          monday:{t:"race-pace",w:"Race Pace <strong>18 km</strong>:<br>2 km easy → <strong>14 km @ 3:35–3:33/km</strong> → 2 km easy",tip:""},
+          tuesday:{t:"rest",w:"REST",tip:""},
+          wednesday:{t:"long",w:"Long Run <strong>26 km</strong> @ 4:45–4:10/km · Last 10 km @ 4:05–3:58",tip:""}
+        }
+      },
+      25:{km:66,type:"Build",tip:"Volume decreasing, quality same. Every session now serves October specifically.",
+        days:{
+          thursday:{t:"rest",w:"REST",tip:""},
+          friday:{t:"easy",w:"Easy <strong>12 km</strong> @ 4:40/km + strides",tip:""},
+          saturday:{t:"intervals",w:"Sharpener: <strong>4×2 km @ 3:35–3:32/km</strong>, 2 min recovery",tip:""},
+          sunday:{t:"easy",w:"Easy <strong>10 km</strong> @ 4:50/km",tip:""},
+          monday:{t:"race-pace",w:"Race Pace <strong>16 km</strong>:<br>2 km easy → <strong>12 km @ 3:35–3:33/km</strong> → 2 km easy",tip:""},
+          tuesday:{t:"rest",w:"REST",tip:""},
+          wednesday:{t:"long",w:"Long Run <strong>26 km</strong> @ 4:45–4:15/km",tip:""}
+        }
+      },
+      26:{km:50,type:"Recovery",tip:"⬇️ Last major recovery. 26 weeks of work locked in permanently.",
+        days:{
+          thursday:{t:"rest",w:"REST",tip:""},
+          friday:{t:"easy",w:"Easy <strong>10 km</strong> @ 4:50/km",tip:""},
+          saturday:{t:"strength",w:"Strength 30 min — light",tip:""},
+          sunday:{t:"easy",w:"Easy <strong>10 km</strong> @ 4:50/km",tip:""},
+          monday:{t:"rest",w:"REST",tip:""},
+          tuesday:{t:"easy",w:"Easy <strong>10 km</strong> @ 4:48/km + strides",tip:""},
+          wednesday:{t:"long",w:"Long Run <strong>18 km</strong> @ 4:50–4:42/km",tip:""}
+        }
+      },
+      27:{km:62,type:"Build",tip:"Race-specific sharpening. Quality over volume. Each session targets October.",
+        days:{
+          thursday:{t:"rest",w:"REST",tip:""},
+          friday:{t:"easy",w:"Easy <strong>12 km</strong> @ 4:40/km + strides",tip:""},
+          saturday:{t:"intervals",w:"Sharpener: <strong>3×2 km @ 3:33–3:30/km</strong>, 90 sec recovery",tip:""},
+          sunday:{t:"easy",w:"Easy <strong>8 km</strong> @ 4:50/km",tip:""},
+          monday:{t:"race-pace",w:"Race Pace <strong>16 km</strong>:<br>2 km easy → <strong>12 km @ 3:35–3:33/km</strong> → 2 km easy",tip:"🎯 3:33/km is your natural pace now. October is just doing this with a bib on."},
+          tuesday:{t:"rest",w:"REST",tip:""},
+          wednesday:{t:"long",w:"Long Run <strong>24 km</strong> @ 4:45–4:15/km",tip:""}
+        }
+      }
+    }
+  },
+  6:{
+    name:"Race Specific + Taper",range:"Weeks 28–35",
+    goal:"Make 3:33/km automatic. Race simulations. 10K tune-up. Taper. Run 1:15:00.",
+    volume:"64 km peak → 22 km race week",
+    focus:"Long race-sim runs. 10K tune-up race wk 33. 2-week taper. October.",
+    weeks:{
+      28:{km:64,type:"Build",tip:"🎯 Race-specific phase. Long runs now include 10–12km at exact race pace. Real race-day confidence built here.",
+        days:{
+          thursday:{t:"rest",w:"REST",tip:""},
+          friday:{t:"easy",w:"Easy <strong>12 km</strong> @ 4:40/km + Core",tip:""},
+          saturday:{t:"race-pace",w:"Race Pace Intervals: <strong>4×3 km @ 3:35–3:30/km</strong><br>90 sec recovery · 2 km warmup + 2 km cooldown",tip:"🎯 Slightly faster than race pace = race day feels controlled."},
+          sunday:{t:"easy",w:"Easy <strong>8 km</strong> @ 4:55/km",tip:""},
+          monday:{t:"tempo",w:"Tempo <strong>14 km</strong>:<br>2 km easy → <strong>10 km @ 3:42–3:35/km</strong> → 2 km easy",tip:""},
+          tuesday:{t:"rest",w:"REST",tip:""},
+          wednesday:{t:"long",w:"Race Sim <strong>24 km</strong>:<br>12 km easy @ 4:45 → <strong>10 km @ 3:35/km</strong> → 2 km cooldown",tip:"💡 Hard at km 18. That's where October gets won."}
+        }
+      },
+      29:{km:66,type:"Build",tip:"Race pace becoming instinctive. The discomfort shrinks each week.",
+        days:{
+          thursday:{t:"rest",w:"REST",tip:""},
+          friday:{t:"easy",w:"Easy <strong>12 km</strong> @ 4:40/km + strides",tip:""},
+          saturday:{t:"race-pace",w:"Race Pace Intervals: <strong>4×3 km @ 3:35–3:30/km</strong>, 90 sec recovery",tip:""},
+          sunday:{t:"easy",w:"Easy <strong>10 km</strong> @ 4:50/km",tip:""},
+          monday:{t:"tempo",w:"Tempo <strong>14 km</strong>:<br>2 km easy → <strong>10 km @ 3:40–3:33/km</strong> → 2 km easy",tip:""},
+          tuesday:{t:"rest",w:"REST",tip:""},
+          wednesday:{t:"long",w:"Race Sim <strong>26 km</strong>:<br>12 km easy → <strong>12 km @ 3:35/km</strong> → 2 km cooldown",tip:""}
+        }
+      },
+      30:{km:62,type:"Build",tip:"Final hard week. Sharpest race-pace intervals. After this, we sharpen and taper.",
+        days:{
+          thursday:{t:"rest",w:"REST",tip:""},
+          friday:{t:"easy",w:"Easy <strong>12 km</strong> @ 4:40/km + strides + Core",tip:""},
+          saturday:{t:"race-pace",w:"Race Pace Intervals: <strong>4×3 km @ 3:33–3:28/km</strong>, 90 sec recovery",tip:"🎯 Faster than goal pace. Race day will feel like relief."},
+          sunday:{t:"easy",w:"Easy <strong>10 km</strong> @ 4:50/km",tip:""},
+          monday:{t:"tempo",w:"Tempo <strong>12 km</strong>:<br>2 km easy → <strong>8 km @ 3:38–3:33/km</strong> → 2 km easy",tip:""},
+          tuesday:{t:"rest",w:"REST",tip:""},
+          wednesday:{t:"long",w:"Race Sim <strong>22 km</strong>:<br>10 km easy → <strong>10 km @ 3:35/km</strong> → 2 km cooldown",tip:""}
+        }
+      },
+      31:{km:46,type:"Recovery",tip:"⬇️ Recovery before final sharpening. Hard work done. Fitness blooms now.",
+        days:{
+          thursday:{t:"rest",w:"REST",tip:""},
+          friday:{t:"easy",w:"Easy <strong>10 km</strong> @ 4:50/km",tip:""},
+          saturday:{t:"easy",w:"Easy <strong>8 km</strong> @ 5:00/km",tip:""},
+          sunday:{t:"rest",w:"REST",tip:""},
+          monday:{t:"easy",w:"Easy <strong>8 km</strong> @ 4:50/km + 4 strides",tip:""},
+          tuesday:{t:"rest",w:"REST",tip:""},
+          wednesday:{t:"long",w:"Long Run <strong>18 km</strong> @ 4:55–4:42/km",tip:""}
+        }
+      },
+      32:{km:54,type:"Build",tip:"Tune-up block. Quality high, volume controlled. Legs sharp.",
+        days:{
+          thursday:{t:"rest",w:"REST",tip:""},
+          friday:{t:"easy",w:"Easy <strong>10 km</strong> @ 4:45/km + strides",tip:""},
+          saturday:{t:"intervals",w:"Sharpener: <strong>3×2 km @ 3:32–3:28/km</strong>, 2 min recovery",tip:""},
+          sunday:{t:"easy",w:"Easy <strong>8 km</strong> @ 5:00/km",tip:""},
+          monday:{t:"race-pace",w:"Race Pace <strong>14 km</strong>:<br>2 km easy → <strong>10 km @ 3:35–3:33/km</strong> → 2 km easy",tip:""},
+          tuesday:{t:"rest",w:"REST",tip:""},
+          wednesday:{t:"long",w:"Long Run <strong>20 km</strong> @ 4:48–4:20/km",tip:""}
+        }
+      },
+      33:{km:44,type:"Build",tip:"🏁 10K tune-up race Wednesday or Sunday. Target 34:30–35:00. Sub-35 confirms sub-1:15.",
+        days:{
+          thursday:{t:"rest",w:"REST",tip:""},
+          friday:{t:"easy",w:"Easy <strong>10 km</strong> @ 4:50/km + strides",tip:""},
+          saturday:{t:"intervals",w:"Sharpener: <strong>6×400m @ 3:25/km</strong>, 90 sec recovery · 2 km warmup + 2 km cooldown",tip:""},
+          sunday:{t:"rest",w:"REST",tip:""},
+          monday:{t:"easy",w:"Easy <strong>6 km</strong> @ 5:00/km + 4×100m strides",tip:""},
+          tuesday:{t:"easy",w:"Easy <strong>4 km</strong> shakeout @ 5:00/km",tip:""},
+          wednesday:{t:"race-pace",w:"🏁 <strong>10K Tune-Up Race or Time Trial</strong><br>Target: <strong>34:30–35:00 (3:27–3:30/km)</strong><br>Sub-35 → sub-1:15 is yours.",tip:"💡 No race? Time trial on flat ground, 2km warmup first."}
+        }
+      },
+      34:{km:38,type:"Taper",tip:"⬇️ Taper week 1. Legs may feel heavy — 'taper madness', normal. Freshness is building underneath.",
+        days:{
+          thursday:{t:"rest",w:"REST",tip:""},
+          friday:{t:"easy",w:"Easy <strong>8 km</strong> @ 4:50–4:40/km",tip:""},
+          saturday:{t:"intervals",w:"Sharpener: <strong>6×400m @ 3:25/km</strong>, 90 sec recovery · 2 km warmup + 2 km cooldown",tip:""},
+          sunday:{t:"rest",w:"REST",tip:""},
+          monday:{t:"easy",w:"Easy <strong>6 km</strong> @ 5:00/km + 4×100m strides",tip:""},
           tuesday:{t:"easy",w:"Easy <strong>8 km</strong> @ 4:55/km",tip:""},
-          wednesday:{t:"strength",w:"Strength 35 min · Squats, RDL, Glute bridge, Calf, Core",tip:""},
-          thursday:{t:"easy",w:"Easy <strong>10 km</strong> @ 5:00/km",tip:""},
-          friday:{t:"rest",w:"REST",tip:""},
-          saturday:{t:"easy",w:"Easy <strong>10 km</strong> @ 4:55/km + 4 strides",tip:""},
-          sunday:{t:"long",w:"Long Run <strong>16 km</strong> @ 5:00–4:45/km",tip:""}
+          wednesday:{t:"easy",w:"Easy <strong>10 km</strong> @ 5:00–4:45/km — last long run",tip:""}
         }
       },
-      19:{km:66,type:"Build",tip:"Back strong. Body has absorbed the first speed block. Now we dial it up.",
+      35:{km:22,type:"Race Week",tip:"🏁 RACE WEEK. The 5pm fasted runs. The back-to-back tired legs. Phoenix lap 12. All of it was practice for this.",
         days:{
-          monday:{t:"rest",w:"REST",tip:""},
-          tuesday:{t:"easy",w:"Easy <strong>13 km</strong> @ 4:45–4:35/km + 6×30 sec strides",tip:""},
-          wednesday:{t:"hills",w:"Hill Repeats: <strong>10×2 min uphill</strong>, jog down recovery<br>2 km warmup + 2 km cooldown",tip:""},
-          thursday:{t:"easy",w:"Easy <strong>10 km</strong> @ 5:00/km",tip:""},
-          friday:{t:"rest",w:"REST",tip:""},
-          saturday:{t:"tempo",w:"Tempo <strong>16 km</strong>: 2 km easy → <strong>12 km @ 3:52–3:42/km</strong> → 2 km easy",tip:""},
-          sunday:{t:"long",w:"Long Run <strong>25 km</strong> @ 4:55–4:25/km",tip:""}
-        }
-      },
-      20:{km:68,type:"Build",tip:"Longest tempos of the plan. Half marathon quality work. This is the key training block.",
-        days:{
-          monday:{t:"rest",w:"REST",tip:""},
-          tuesday:{t:"easy",w:"Easy <strong>13 km</strong> @ 4:45–4:35/km + strides",tip:""},
-          wednesday:{t:"intervals",w:"Cruise Intervals: <strong>3×3 km @ 3:48–3:43/km</strong><br>2 min recovery · 2 km warmup + 2 km cooldown",tip:""},
-          thursday:{t:"easy",w:"Easy <strong>10 km</strong> @ 5:00/km",tip:""},
-          friday:{t:"rest",w:"REST",tip:""},
-          saturday:{t:"race-pace",w:"Race Pace Run <strong>16 km</strong>:<br>2 km easy → <strong>12 km @ 3:38–3:33/km</strong> → 2 km easy",tip:"🎯 3:38/km = your race pace. How does it feel? This is your future normal."},
-          sunday:{t:"long",w:"Long Run <strong>26 km</strong> @ 4:55–4:20/km · Last 8 km @ 4:15",tip:""}
-        }
-      },
-      21:{km:70,type:"Build",tip:"Peak volume week. This is as hard as the plan gets. Everything before race day is downhill from here.",
-        days:{
-          monday:{t:"rest",w:"REST",tip:""},
-          tuesday:{t:"easy",w:"Easy <strong>14 km</strong> @ 4:40–4:30/km + strides + Core",tip:""},
-          wednesday:{t:"intervals",w:"VO2max: <strong>10×600m @ 3:30–3:26/km</strong>, 90 sec recovery",tip:""},
-          thursday:{t:"easy",w:"Easy <strong>10 km</strong> @ 5:00/km",tip:""},
-          friday:{t:"rest",w:"REST",tip:""},
-          saturday:{t:"tempo",w:"Tempo <strong>16 km</strong>: 2 km easy → <strong>12 km @ 3:48–3:38/km</strong> → 2 km easy",tip:""},
-          sunday:{t:"long",w:"Long Run <strong>27 km</strong> @ 4:50–4:20/km · Last 10 km @ 4:15–4:05",tip:""}
-        }
-      },
-      22:{km:48,type:"Recovery",tip:"⬇️ Recovery week. You've done the peak. Your body is synthesizing massive fitness right now. Rest = gains.",
-        days:{
-          monday:{t:"rest",w:"REST",tip:""},
-          tuesday:{t:"easy",w:"Easy <strong>10 km</strong> @ 4:50/km",tip:""},
-          wednesday:{t:"strength",w:"Strength 35 min",tip:""},
-          thursday:{t:"easy",w:"Easy <strong>10 km</strong> @ 5:00/km",tip:""},
-          friday:{t:"rest",w:"REST",tip:""},
-          saturday:{t:"easy",w:"Easy <strong>10 km</strong> @ 4:50/km + strides",tip:""},
-          sunday:{t:"long",w:"Long Run <strong>18 km</strong> @ 4:55–4:45/km",tip:""}
-        }
-      },
-      23:{km:70,type:"Build",tip:"Mixed intervals — toughest workout in the plan. Builds top-end speed and teaches pace changes.",
-        days:{
-          monday:{t:"rest",w:"REST",tip:""},
-          tuesday:{t:"easy",w:"Easy <strong>14 km</strong> @ 4:40–4:30/km + 6×150m strides",tip:""},
-          wednesday:{t:"intervals",w:"Mixed: <strong>3 sets of (1200m @ 3:37 + 800m @ 3:32 + 400m @ 3:22)</strong><br>3 min rest between sets · 2 km warmup + 2 km cooldown",tip:"💡 Hardest session of the plan. Full 3 min between sets. Don't rush recovery."},
-          thursday:{t:"easy",w:"Easy <strong>10 km</strong> @ 5:00/km",tip:""},
-          friday:{t:"rest",w:"REST",tip:""},
-          saturday:{t:"race-pace",w:"Race Pace Run <strong>16 km</strong>:<br>2 km easy → <strong>12 km @ 3:37–3:33/km</strong> → 2 km easy",tip:"🎯 Exact race pace. Getting comfortable here is the whole game."},
-          sunday:{t:"long",w:"Long Run <strong>27 km</strong> @ 4:50–4:15/km · Last 10 km @ 4:10–4:00",tip:""}
-        }
-      },
-      24:{km:72,type:"Build",tip:"Near-peak fitness. This week cements everything. After this, we sharpen for the race.",
-        days:{
-          monday:{t:"rest",w:"REST",tip:""},
-          tuesday:{t:"easy",w:"Easy <strong>14 km</strong> @ 4:40–4:30/km + strides",tip:""},
-          wednesday:{t:"intervals",w:"Mixed: <strong>3 sets of (1200m @ 3:35 + 800m @ 3:30 + 400m @ 3:20)</strong><br>3 min rest between sets",tip:""},
-          thursday:{t:"easy",w:"Easy <strong>10 km</strong> @ 5:00/km",tip:""},
-          friday:{t:"rest",w:"REST",tip:""},
-          saturday:{t:"race-pace",w:"Race Pace Run <strong>18 km</strong>:<br>2 km easy → <strong>14 km @ 3:37–3:33/km</strong> → 2 km easy",tip:""},
-          sunday:{t:"long",w:"Long Run <strong>28 km</strong> @ 4:50–4:10/km · Last 10 km @ 4:05–3:58",tip:""}
-        }
-      },
-      25:{km:64,type:"Build",tip:"Starting to sharpen. Volume pulling back slightly, quality staying high.",
-        days:{
-          monday:{t:"rest",w:"REST",tip:""},
-          tuesday:{t:"easy",w:"Easy <strong>12 km</strong> @ 4:40/km + strides",tip:""},
-          wednesday:{t:"intervals",w:"Sharpener: <strong>4×2 km @ 3:35–3:32/km</strong>, 2 min recovery",tip:""},
-          thursday:{t:"easy",w:"Easy <strong>10 km</strong> @ 5:00/km",tip:""},
-          friday:{t:"rest",w:"REST",tip:""},
-          saturday:{t:"race-pace",w:"Race Pace <strong>16 km</strong>: 2 km easy → <strong>12 km @ 3:35–3:33/km</strong> → 2 km easy",tip:""},
-          sunday:{t:"long",w:"Long Run <strong>24 km</strong> @ 4:50–4:15/km",tip:""}
-        }
-      },
-      26:{km:44,type:"Recovery",tip:"⬇️ Last major recovery week. 26 weeks of work done. The fitness is locked in. Now we race-specific sharpen.",
-        days:{
-          monday:{t:"rest",w:"REST",tip:""},
-          tuesday:{t:"easy",w:"Easy <strong>10 km</strong> @ 4:50/km",tip:""},
-          wednesday:{t:"strength",w:"Strength 30 min · light",tip:""},
-          thursday:{t:"easy",w:"Easy <strong>10 km</strong> @ 5:00/km",tip:""},
-          friday:{t:"rest",w:"REST",tip:""},
-          saturday:{t:"easy",w:"Easy <strong>8 km</strong> @ 4:50/km + strides",tip:""},
-          sunday:{t:"long",w:"Long Run <strong>16 km</strong> @ 5:00–4:45/km",tip:""}
-        }
-      }
-    }
-  },
-  4:{name:"Race Specific",range:"Weeks 27–32",goal:"Make 3:33/km feel easy. Race simulations. Build race-day confidence.",volume:"48–68 km/week",focus:"Long runs with race-pace segments. Race pace intervals faster than goal pace.",
-    weeks:{
-      27:{km:64,type:"Build",tip:"🎯 Race-specific phase. Long runs now include race-pace segments. This is the final preparation.",
-        days:{
-          monday:{t:"rest",w:"REST",tip:""},
-          tuesday:{t:"easy",w:"Easy <strong>12 km</strong> @ 4:45–4:35/km + Core",tip:""},
-          wednesday:{t:"race-pace",w:"Race Pace Intervals: <strong>4×3 km @ 3:35–3:30/km</strong><br>90 sec recovery · 2 km warmup + 2 km cooldown",tip:"🎯 Slightly faster than race pace = race day feels comfortable."},
-          thursday:{t:"easy",w:"Easy <strong>8 km</strong> @ 5:10/km",tip:""},
-          friday:{t:"rest",w:"REST",tip:""},
-          saturday:{t:"tempo",w:"Tempo <strong>14 km</strong>: 2 km easy → <strong>10 km @ 3:42–3:35/km</strong> → 2 km easy",tip:""},
-          sunday:{t:"long",w:"Race Sim Long Run <strong>24 km</strong>:<br>12 km easy @ 4:50 → <strong>10 km @ 3:35/km</strong> → 2 km cooldown",tip:"💡 The most important session. It will feel hard at km 18. Good. That's the point. That's where the race is won."}
-        }
-      },
-      28:{km:66,type:"Build",tip:"Race pace feeling more familiar. The discomfort is decreasing. This is adaptation.",
-        days:{
-          monday:{t:"rest",w:"REST",tip:""},
-          tuesday:{t:"easy",w:"Easy <strong>12 km</strong> @ 4:45–4:35/km + strides",tip:""},
-          wednesday:{t:"race-pace",w:"Race Pace Intervals: <strong>4×3 km @ 3:35–3:30/km</strong>, 90 sec recovery",tip:""},
-          thursday:{t:"easy",w:"Easy <strong>10 km</strong> @ 5:00/km",tip:""},
-          friday:{t:"rest",w:"REST",tip:""},
-          saturday:{t:"tempo",w:"Tempo <strong>14 km</strong>: 2 km easy → <strong>10 km @ 3:40–3:33/km</strong> → 2 km easy",tip:""},
-          sunday:{t:"long",w:"Race Sim Long Run <strong>26 km</strong>:<br>12 km easy → <strong>12 km @ 3:35/km</strong> → 2 km cooldown",tip:""}
-        }
-      },
-      29:{km:64,type:"Build",tip:"Final hard week before the taper begins. Sharpest race-pace session of the plan.",
-        days:{
-          monday:{t:"rest",w:"REST",tip:""},
-          tuesday:{t:"easy",w:"Easy <strong>12 km</strong> @ 4:45–4:35/km + strides + Core",tip:""},
-          wednesday:{t:"race-pace",w:"Race Pace Intervals: <strong>4×3 km @ 3:33–3:28/km</strong>, 90 sec recovery",tip:"🎯 Slightly faster than race goal. Race day will feel like a relief."},
-          thursday:{t:"easy",w:"Easy <strong>10 km</strong> @ 5:00/km",tip:""},
-          friday:{t:"rest",w:"REST",tip:""},
-          saturday:{t:"tempo",w:"Tempo <strong>12 km</strong>: 2 km easy → <strong>8 km @ 3:38–3:33/km</strong> → 2 km easy",tip:""},
-          sunday:{t:"long",w:"Race Sim Long Run <strong>24 km</strong>:<br>10 km easy → <strong>12 km @ 3:35/km</strong> → 2 km cooldown",tip:""}
-        }
-      },
-      30:{km:46,type:"Recovery",tip:"⬇️ Recovery + pre-taper. The hard work is done. Now we sharpen the blade.",
-        days:{
-          monday:{t:"rest",w:"REST",tip:""},
-          tuesday:{t:"easy",w:"Easy <strong>10 km</strong> @ 4:50/km",tip:""},
-          wednesday:{t:"easy",w:"Easy <strong>8 km</strong> @ 5:00/km",tip:""},
-          thursday:{t:"rest",w:"REST",tip:""},
-          friday:{t:"easy",w:"Easy <strong>8 km</strong> @ 4:50/km + 4 strides",tip:""},
-          saturday:{t:"rest",w:"REST",tip:""},
-          sunday:{t:"long",w:"Long Run <strong>18 km</strong> @ 4:55–4:40/km",tip:""}
-        }
-      },
-      31:{km:54,type:"Build",tip:"Tune-up block. Quality high, volume down. Every session now builds race-day confidence.",
-        days:{
-          monday:{t:"rest",w:"REST",tip:""},
-          tuesday:{t:"easy",w:"Easy <strong>10 km</strong> @ 4:45/km + strides",tip:""},
-          wednesday:{t:"intervals",w:"Sharpener: <strong>3×2 km @ 3:32–3:28/km</strong>, 2 min recovery",tip:""},
-          thursday:{t:"easy",w:"Easy <strong>8 km</strong> @ 5:00/km",tip:""},
-          friday:{t:"rest",w:"REST",tip:""},
-          saturday:{t:"race-pace",w:"Race Pace <strong>14 km</strong>: 2 km easy → <strong>10 km @ 3:35–3:33/km</strong> → 2 km easy",tip:""},
-          sunday:{t:"long",w:"Long Run <strong>20 km</strong> @ 4:50–4:20/km",tip:""}
-        }
-      },
-      32:{km:44,type:"Build",tip:"10K tune-up race this Sunday! Target 34:30–35:00. This tells you exactly where you are.",
-        days:{
-          monday:{t:"rest",w:"REST",tip:""},
-          tuesday:{t:"easy",w:"Easy <strong>10 km</strong> @ 4:50/km + strides",tip:""},
-          wednesday:{t:"intervals",w:"Sharpener: <strong>6×400m @ 3:25/km</strong>, 90 sec recovery<br>2 km warmup + 2 km cooldown",tip:""},
-          thursday:{t:"rest",w:"REST",tip:""},
-          friday:{t:"easy",w:"Easy <strong>6 km</strong> @ 5:00/km + 4×100m strides",tip:""},
-          saturday:{t:"easy",w:"Easy <strong>4 km</strong> shakeout @ 5:00/km",tip:""},
-          sunday:{t:"race-pace",w:"🏁 <strong>10K Tune-Up Race or Time Trial</strong><br>Target: <strong>34:30–35:00 (3:27–3:30/km)</strong><br>Sub-35 10K → sub-1:15 HM is very achievable.",tip:"💡 No race? Do a 10km time trial on flat ground. Warm up 2km easy first."}
-        }
-      }
-    }
-  },
-  5:{name:"Taper",range:"Weeks 33–34",goal:"Fresh legs, sharp mind. Trust the 34 weeks of work. Race with confidence.",volume:"38–22 km/week",focus:"Cut volume 50%, keep a few sharp efforts. Visualize. Prepare.",
-    weeks:{
-      33:{km:38,type:"Taper",tip:"⬇️ Taper week 1. Your legs might feel weird or heavy — that's completely normal. The fitness is there. The freshness is building.",
-        days:{
-          monday:{t:"rest",w:"REST",tip:""},
-          tuesday:{t:"easy",w:"Easy <strong>8 km</strong> @ 4:50–4:40/km",tip:""},
-          wednesday:{t:"intervals",w:"Sharpener: <strong>6×400m @ 3:25/km</strong>, 90 sec recovery<br>2 km warmup + 2 km cooldown",tip:"💡 Short and fast. Just reminding your legs what fast feels like."},
-          thursday:{t:"rest",w:"REST",tip:""},
-          friday:{t:"easy",w:"Easy <strong>6 km</strong> @ 5:00/km + 4×100m strides",tip:""},
-          saturday:{t:"easy",w:"Easy <strong>8 km</strong> @ 4:55/km",tip:""},
-          sunday:{t:"easy",w:"Easy <strong>10 km</strong> @ 5:00–4:45/km · Last long run",tip:""}
-        }
-      },
-      34:{km:22,type:"Race Week",tip:"🏁 RACE WEEK. 34 weeks of Ramadan runs, evening sessions after long shifts, boredom, leg pain that went away, slow paces that got faster. It all comes down to this.",
-        days:{
-          monday:{t:"easy",w:"Easy <strong>6 km</strong> @ 5:00/km + 3×200m strides",tip:""},
-          tuesday:{t:"easy",w:"Easy <strong>5 km</strong> @ 5:00/km · Light and breezy.",tip:""},
-          wednesday:{t:"rest",w:"REST — Hydrate all day. Start carb-loading tonight.",tip:"🍝 Pasta, rice, bread. No new foods. 3L water minimum."},
-          thursday:{t:"easy",w:"Easy <strong>4 km</strong> @ 5:00/km + 4×100m strides · Feel the legs pop.",tip:""},
-          friday:{t:"rest",w:"REST — Big carb dinner. Sleep early — 9pm if possible.",tip:"💡 Visualize km 15–18 when it gets hard. You've been there in training."},
-          saturday:{t:"rest",w:"REST — Prep race kit. Pin your bib. Set two alarms. Visualize crossing the line.",tip:""},
-          sunday:{t:"race",w:"🏁 <strong>RACE DAY — HALF MARATHON</strong><br><br><strong>Race Strategy:</strong><br>Km 0–3: 3:40/km (feels too easy = perfect)<br>Km 3–8: settle to 3:35/km<br>Km 8–18: hold 3:33/km<br>Km 18–21: empty the tank<br><br><strong>Target: 1:15:00</strong> · You've done the work.",tip:"🔥 The first 3km will feel easy. DON'T go faster. The race starts at km 15. Everything before that is just getting to the start line in good shape. YOU'VE GOT THIS."}
+          thursday:{t:"easy",w:"Easy <strong>6 km</strong> @ 5:00/km + 3×200m strides",tip:""},
+          friday:{t:"easy",w:"Easy <strong>5 km</strong> @ 5:00/km — light and breezy",tip:""},
+          saturday:{t:"rest",w:"REST — Hydrate all day. Carb-load tonight.",tip:"🍝 Pasta, rice, bread. No new foods. 3L water."},
+          sunday:{t:"rest",w:"REST — Big carb dinner. Bed by 9pm.",tip:"💡 Visualize km 15–18. You know what to do."},
+          monday:{t:"easy",w:"Easy <strong>4 km</strong> @ 5:00/km + 4×100m strides",tip:""},
+          tuesday:{t:"rest",w:"REST — Prep kit. Pin bib. Two alarms.",tip:""},
+          wednesday:{t:"race",w:"🏁 <strong>RACE DAY — HALF MARATHON</strong><br><br>Km 0–3: <strong>3:40/km</strong> — feels easy = perfect<br>Km 3–8: <strong>3:35/km</strong><br>Km 8–18: <strong>3:33/km</strong> locked<br>Km 18–21: empty the tank<br><br><strong>Target: 1:15:00</strong>",tip:"🔥 First 3km feel easy — do NOT speed up. Race starts km 15. You raced Phoenix lap 12 on exhausted legs. 21km is your reward."}
         }
       }
     }
   }
 };
 
-let curPhase=1,curWeek=1;
-
+let curPhase=1, curWeek=1;
 function getPhaseWeeks(p){return Object.keys(plan[p].weeks).map(Number);}
-function getWeekStart(wn){return addDays(PLAN_START,(wn-1)*7);}
-function getDayDate(wn,di){return addDays(getWeekStart(wn),di);}
-function addDays(d,n){const r=new Date(d);r.setDate(r.getDate()+n);return r;}
-function fmtDate(d){return d.toLocaleDateString('en-GB',{day:'numeric',month:'short'});}
 function isToday(d){const t=new Date();return d.getFullYear()===t.getFullYear()&&d.getMonth()===t.getMonth()&&d.getDate()===t.getDate();}
-
 function renderPhaseBanner(p){
   const ph=plan[p];
-  document.getElementById('phaseBanner').innerHTML=`<div class="phase-title">Phase ${p}: ${ph.name} · ${ph.range}</div><div class="phase-meta"><strong>Goal:</strong> ${ph.goal} &nbsp;|&nbsp; <strong>Volume:</strong> ${ph.volume}</div><div class="phase-meta" style="margin-top:4px;"><strong>Focus:</strong> ${ph.focus}</div>`;
+  document.getElementById('phaseBanner').innerHTML=
+    `<div class="phase-title">Phase ${p}: ${ph.name} · ${ph.range}</div>`+
+    `<div class="phase-meta"><strong>Goal:</strong> ${ph.goal} &nbsp;|&nbsp; <strong>Volume:</strong> ${ph.volume}</div>`+
+    `<div class="phase-meta" style="margin-top:4px;"><strong>Focus:</strong> ${ph.focus}</div>`;
 }
-
 function getBadgeClass(t){return{Build:'b-build',Recovery:'b-recovery',Taper:'b-taper','Race Week':'b-raceweek',Ramadan:'b-ramadan',Phoenix:'b-phoenix'}[t]||'b-build';}
 function getPillClass(t){return{easy:'p-easy',tempo:'p-tempo',intervals:'p-intervals',long:'p-long',recovery:'p-recovery',rest:'p-rest',strength:'p-strength',hills:'p-hills','race-pace':'p-race-pace',race:'p-race'}[t]||'p-easy';}
-
 function renderWeek(wn){
-  let phData,weekData;
-  for(let p=1;p<=5;p++){if(plan[p].weeks[wn]){phData=plan[p];weekData=plan[p].weeks[wn];break;}}
+  let weekData;
+  for(let p=1;p<=6;p++){if(plan[p].weeks[wn]){weekData=plan[p].weeks[wn];break;}}
   if(!weekData)return;
   const ws=getWeekStart(wn);
-  const ram=wn>=1&&wn<=4;
-  let html=`<div class="week-hdr"><div class="week-title">Week ${wn} · ${fmtDate(ws)}</div><div class="badges"><span class="badge b-km">${weekData.km} km</span><span class="badge ${getBadgeClass(weekData.type)}">${weekData.type}</span>${ram?'<span class="badge b-ramadan">🌙 Ramadan</span>':''}</div></div>`;
+  const isRam=wn>=1&&wn<=4;
+  let html=`<div class="week-hdr"><div class="week-title">Week ${wn} · ${fmtDate(ws)}</div><div class="badges"><span class="badge b-km">${weekData.km} km</span><span class="badge ${getBadgeClass(weekData.type)}">${weekData.type}</span>${isRam?'<span class="badge b-ramadan">🌙 Ramadan</span>':''}</div></div>`;
   if(weekData.tip)html+=`<div class="week-tip">${weekData.tip}</div>`;
-  ['monday','tuesday','wednesday','thursday','friday','saturday','sunday'].forEach((dk,i)=>{
-    const day=weekData.days[dk];
-    if(!day)return;
-    const dd=getDayDate(wn,i);
-    const today=isToday(dd);
-    html+=`<div class="day-card ${today?'today':''}"><div class="d-name">${['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'][i]}<span class="d-date">${fmtDate(dd)}${today?' · TODAY':''}</span></div><div><span class="pill ${getPillClass(day.t)}">${day.t}</span></div><div class="d-workout">${day.w}${day.tip?`<div class="d-tip">${day.tip}</div>`:''}</div></div>`;
+  DAY_KEYS.forEach((dk,i)=>{
+    const day=weekData.days[dk];if(!day)return;
+    const dd=getDayDate(wn,i);const today=isToday(dd);
+    html+=`<div class="day-card ${today?'today':''}"><div class="d-name">${DAY_NAMES[i]}<span class="d-date">${fmtDate(dd)}${today?' · TODAY':''}</span></div><div><span class="pill ${getPillClass(day.t)}">${day.t}</span></div><div class="d-workout">${day.w}${day.tip?`<div class="d-tip">${day.tip}</div>`:''}</div></div>`;
   });
   document.getElementById('weekContent').innerHTML=html;
 }
-
 function populateWeekSelect(p){
-  const weeks=getPhaseWeeks(p);
-  const sel=document.getElementById('weekSelect');
-  sel.innerHTML='';
-  weeks.forEach(wn=>{
-    const wd=plan[p].weeks[wn];
-    const o=document.createElement('option');
-    o.value=wn;o.textContent=`Week ${wn} · ${wd.type} · ${wd.km}km`;
-    sel.appendChild(o);
-  });
+  const weeks=getPhaseWeeks(p);const sel=document.getElementById('weekSelect');sel.innerHTML='';
+  weeks.forEach(wn=>{const wd=plan[p].weeks[wn];const o=document.createElement('option');o.value=wn;o.textContent=`Week ${wn} · ${wd.type} · ${wd.km}km`;sel.appendChild(o);});
   curWeek=weeks[0];sel.value=curWeek;
 }
-
-function changePhase(){
-  curPhase=parseInt(document.getElementById('phaseSelect').value);
-  renderPhaseBanner(curPhase);populateWeekSelect(curPhase);renderWeek(curWeek);
-}
-function changeWeek(){
-  curWeek=parseInt(document.getElementById('weekSelect').value);renderWeek(curWeek);
-}
-
+function changePhase(){curPhase=parseInt(document.getElementById('phaseSelect').value);renderPhaseBanner(curPhase);populateWeekSelect(curPhase);renderWeek(curWeek);}
+function changeWeek(){curWeek=parseInt(document.getElementById('weekSelect').value);renderWeek(curWeek);}
 function autoSetCurrentWeek(){
   const today=new Date();
-  for(let p=1;p<=5;p++){
-    for(let wn of getPhaseWeeks(p)){
-      const ws=getWeekStart(wn);
-      const we=addDays(ws,6);
-      if(today>=ws&&today<=we){
-        curPhase=p;curWeek=wn;
-        document.getElementById('phaseSelect').value=p;
-        renderPhaseBanner(p);populateWeekSelect(p);
-        document.getElementById('weekSelect').value=wn;
-        renderWeek(wn);return;
-      }
-    }
-  }
+  for(let p=1;p<=6;p++){for(const wn of getPhaseWeeks(p)){const ws=getWeekStart(wn);const we=addDays(ws,6);if(today>=ws&&today<=we){curPhase=p;curWeek=wn;document.getElementById('phaseSelect').value=p;renderPhaseBanner(p);populateWeekSelect(p);document.getElementById('weekSelect').value=wn;renderWeek(wn);return;}}}
   renderPhaseBanner(1);populateWeekSelect(1);renderWeek(1);
 }
-
 autoSetCurrentWeek();
 </script>
 </body>
